@@ -14,10 +14,17 @@ const ResetPassword = () => {
     const dispatch = useDispatch();
     const resetPasswordStatus = useSelector(state => state.auth.resetPasswordStatus);
 
+    var valid = true;
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!password) {
           alert('Enter Password');
+          return;
+        }
+        if (password.length<8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
+          alert('Password must contain at least eight characters including at least 1 letter and 1 number');
+          valid=false;
           return;
         }
         if (!confirmPassword) {
@@ -28,15 +35,16 @@ const ResetPassword = () => {
             alert('Confirm Password must be same as New Password');
             return;
         }
-        
-        const result = await dispatch(resetPassword({id, token, password}, navigate));
-        if (result.success) {
-            alert('Password Reset Successful!\nLOGIN to continue...')
-            navigate('/Auth');
-        } else {
-            alert(result.message);
-        }
-    };
+        if (!valid === false) {
+          const result = await dispatch(resetPassword({id, token, password}, navigate));
+          if (result.success) {
+              alert('Password Reset Successful!\nLOGIN to continue...')
+              navigate('/Auth');
+          } else {
+              alert(result.message);
+          }
+      }
+    }
 
     return (
         <section className="auth-section">
