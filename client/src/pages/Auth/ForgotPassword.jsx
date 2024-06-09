@@ -24,7 +24,7 @@ const ForgotPassword = () => {
                 navigate('/Auth');
             } else {
                 console.error(response.message);
-                alert('Invalid E-Mail);
+                alert('Invalid E-Mail');
             }
         }
     };
