@@ -63,7 +63,7 @@ export const forgotpassword = async (req, res) => {
             from: process.env.GMAIL,
             to: email,
             subject: 'Reset Your Password',
-            text: `https://stack-overflow-6ft-alien.vercel.app/reset-password/${user._id}/${token}`
+            text: `Dear User,\nPlease Click on the below link to reset your password.\n\nhttps://stack-overflow-6ft-alien.vercel.app/reset-password/${user._id}/${token} \n\nThank you for using my stack overflow clone\nRegards\nNityanand K G\naka 6ft-alien`
         };
     
         const info = await transporter.sendMail(mailOptions);
