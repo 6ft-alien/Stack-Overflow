@@ -17,7 +17,7 @@ const QuestionsDetails = () => {
   const { id } = useParams()
   const questionsList = useSelector(state => state.questionsReducer)
   const location = useLocation()
-  const url = 'http://localhost:3000'
+  const url = 'https://stack-overflow-6ft-alien.vercel.app'
 
   const Navigate = useNavigate()
   const dispatch = useDispatch()
