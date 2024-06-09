@@ -13,9 +13,12 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
         e.preventDefault()
         if(tags.length === 0) {
             dispatch(updateProfile(currentUser?.result?._id, { name, about, tags: currentUser?.result?.tags }))
+            alert('Updated Profile Successfully')
         }
         else {
             dispatch(updateProfile(currentUser?.result?._id, { name, about, tags }))
+            alert('Updated Profile Successfully')
+
         }
         setSwitch(false)
     }

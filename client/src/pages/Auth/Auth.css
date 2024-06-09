@@ -76,3 +76,7 @@
     cursor: pointer;
 
 }
+.forgot {
+    text-decoration: none;
+    cursor: pointer;
+}

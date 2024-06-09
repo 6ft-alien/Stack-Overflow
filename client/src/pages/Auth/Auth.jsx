@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import icon from '../../assets/icon.svg';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Auth.css';
 import AboutAuth from './AboutAuth';
 import { signup, login } from '../../actions/auth';
@@ -14,25 +14,66 @@ const Auth = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  var valid = true;
 
   const handleSwitch = () => {
     setIsSignup(!isSignup);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email || !password) {
+    if (isSignup) {
+      if (!email && !password && !name) {
+        valid=false;
+        alert('Enter Name, Email & Password');
+        return;
+      }
+      if (!email && password && !name) {
+        alert('Enter Name & Email');
+        valid=false;
+        return;
+      }
+    }
+    if (!email && !password) {
       alert('Enter Email & Password');
+      valid=false;
+      return;
+    }
+    if (!email && password) {
+      alert('Enter Email');
+      valid=false;
+      return;
+    }
+    if (email && !password) {
+      alert('Enter Password');
+      valid=false;
       return;
     }
     if (isSignup) {
       if (!name) {
         alert('Enter Name');
+        valid=false;
         return;
       }
-      dispatch(signup({ name, email, password }, navigate));
+      if (password.length<8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
+        alert('Password must contain at least eight characters including at least 1 letter and 1 number');
+        valid=false;
+      }
+      if (!valid === false) {
+        const response = await dispatch(signup({ name, email, password }, navigate));
+      if (!response.success) {
+        alert(response.message);
+      } else {
+        alert('Registration successful!');
+      }
+      }
     } else {
-      dispatch(login({ email, password }, navigate));
+      const response = await dispatch(login({ email, password }, navigate));
+      if (!response.success) {
+        alert(response.message);
+      } else {
+        alert('Login successful!');
+      }
     }
   };
 
@@ -49,6 +90,7 @@ const Auth = () => {
                 type="text"
                 id="name"
                 name="name"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </label>
@@ -59,18 +101,24 @@ const Auth = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <label htmlFor="password">
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <h4>Password</h4>
-              {!isSignup && <p style={{ color: '#007ac6', fontSize: '13px' }}>Forgot Password?</p>}
+              {!isSignup && (
+                <Link className='forgot' to={'/forgot-password'}>
+                  <p style={{ color: '#007ac6', fontSize: '13px' }}>Forgot Password?</p>
+                </Link>
+              )}
             </div>
             <input
               type="password"
               name="password"
               id="password"
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             {isSignup && (
@@ -119,3 +167,4 @@ const Auth = () => {
 };
 
 export default Auth;
+  

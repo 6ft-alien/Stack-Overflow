@@ -8,15 +8,15 @@ import { useSelector } from 'react-redux'
 const HomeMainbar = () => {
 
   const location = useLocation()
-  const user = 1;
+  const User = useSelector((state) => (state.currentUserReducer))
   const navigate = useNavigate()
 
   const questionsList = useSelector(state => state.questionsReducer)
   console.log(questionsList)
 
   const checkAuth = () => {
-    if(user === null){
-      alert("login or signup to ask a question")
+    if(User === null){
+      alert("Login or SignUp to ask a question")
       navigate('/Auth')
     }
     else {

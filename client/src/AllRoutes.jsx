@@ -8,6 +8,9 @@ import DisplayQuestion from './pages/Questions/DisplayQuestion'
 import Tags from './pages/Tags/Tags'
 import Users from './pages/Users/Users'
 import UserProfile from './pages/UserProfile/UserProfile'
+import ForgotPassword from './pages/Auth/ForgotPassword'
+import ResetPassword from './pages/Auth/ResetPassword'
+
 const AllRoutes = () => {
   return (
     <Routes>
@@ -19,6 +22,8 @@ const AllRoutes = () => {
         <Route path='/Tags' element={<Tags />} />
         <Route path='/Users' element={<Users />} />
         <Route path='/Users/:id' element={<UserProfile />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/reset-password/:id/:token' element={<ResetPassword />} />
     </Routes>
   )
 }

@@ -2,16 +2,19 @@ import express from 'express'
 import dotenv from "dotenv";
 import cors from 'cors'
 import mongoose from 'mongoose';
-
 import userRoutes from './routes/users.js'
 import questionRoutes from './routes/Questions.js'
 import answerRoutes from './routes/Answers.js'
+
 
 const app = express();
 dotenv.config();
 app.use(express.json({limit: "30mb", extended: true}))
 app.use(express.urlencoded({limit: "30mb", extended: true}))
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true 
+  }));
 
 app.get('/',(req,res) => {
     res.send("This is a Stack Overflow Clone API")

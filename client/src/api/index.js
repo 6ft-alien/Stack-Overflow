@@ -11,6 +11,8 @@ API.interceptors.request.use((req) => {
 
 export const logIn = (authData) => API.post('/user/login', authData);
 export const signUp = (authData) => API.post('/user/signup', authData);
+export const forgotPassword = (email) => API.post('/user/forgot-password', email);
+export const resetPassword = (id, token, password) => API.patch(`/user/reset-password/${id}/${token}`, { password });
 
 export const postQuestion = (questionData) => API.post('/questions/Ask', questionData);
 export const getAllQuestions = () => API.get('/questions/get');
