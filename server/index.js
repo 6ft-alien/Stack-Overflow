@@ -12,7 +12,7 @@ dotenv.config();
 app.use(express.json({limit: "30mb", extended: true}))
 app.use(express.urlencoded({limit: "30mb", extended: true}))
 app.use(cors({
-    origin: [""],
+    origin: ["https://stack-overflow-6ft-alien.vercel.app"],
     methods: ["POST", "GET", "PATCH", "PUT", "DELETE"],    
     credentials: true 
   }));
