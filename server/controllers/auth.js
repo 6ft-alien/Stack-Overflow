@@ -50,7 +50,7 @@ export const forgotpassword = async (req, res) => {
         if (!user) {
             return res.status(404).json({ Status: "User does not exist" });
         }
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "5m" });
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -63,7 +63,7 @@ export const forgotpassword = async (req, res) => {
             from: process.env.GMAIL,
             to: email,
             subject: 'Reset Your Password',
-            text: `Dear User,\nPlease Click on the below link to reset your password.\n\nhttps://stack-overflow-6ft-alien.vercel.app/reset-password/${user._id}/${token} \n\nThank you for using my stack overflow clone\nRegards\nNityanand K G\naka 6ft-alien`
+            text: `Dear User,\nPlease Click on the below link to reset your password. Do not share it with anyone and the link expires in 5 minutes.\n\nhttps://stack-overflow-6ft-alien.vercel.app/reset-password/${user._id}/${token} \n\nThank you for using my stack overflow clone\nRegards\nNityanand K G\naka 6ft-alien`
         };
     
         const info = await transporter.sendMail(mailOptions);
