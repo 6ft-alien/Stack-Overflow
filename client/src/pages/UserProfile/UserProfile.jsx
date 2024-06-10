@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from 'react-redux'
 import moment from 'moment'
 
 import pen from '../../assets/pen-solid.svg'
+import info from '../../assets/info.svg'
 import cake_candles from '../../assets/cake_candles.svg'
 import LeftSideBar from '../../components/LeftSidebar/LeftSidebar'
 import Avatar from '../../components/Avatar/Avatar'
@@ -14,12 +15,16 @@ import './UsersProfile.css'
 const UserProfile = () => {
 
     const { id } = useParams()
+    const navigate = useNavigate()
     const users = useSelector((state) => state.usersReducer)
-    const currentProfile = users.filter((user) => user._id === id ) [0]
+    const currentProfile = users.filter((user) => user._id === id )[0]
     const currentUser = useSelector((state) => state.currentUserReducer)
-    console.log(currentUser)
 
     const [Switch, setSwitch] = useState(false)
+
+    const handleLoginHistory = () => {
+        navigate(`/Users/login-history/${id}`)
+    }
 
     return (
         <div className="home-container-1">
@@ -38,9 +43,15 @@ const UserProfile = () => {
                         </div>
                         {
                             currentUser?.result._id === id && (
-                                <button type='button' onClick={() => setSwitch(true)} className="edit-profile-btn">
-                                    <img src={pen} alt="" style={{height:"13px"}}/> Edit Profile
-                                </button>
+                                <div>
+                                    <button type='button' onClick={() => setSwitch(true)} className="edit-profile-btn">
+                                        <img src={pen} alt="" style={{height:"13px", marginRight:"5px"}}/> Edit Profile
+                                    </button>
+                                    <button type='button' onClick={() => handleLoginHistory()} className="edit-profile-btn">
+                                        <img src={info} alt="" style={{height:"13px", marginRight:"5px"}}/> Login History
+                                    </button>
+                                </div>
+                                
                             )
                         }
                     </div>
