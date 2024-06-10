@@ -1,0 +1,23 @@
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+.table-container th,
+.table-container td {
+    text-align: left;
+    padding: 10px;
+    width: 20%;
+    border: 1px solid #dddddd;
+}
+.table-container th {
+    background-color: #eeeeee;
+}
+.table-container td {
+    background-color: #fdfdfd;
+}
+
+
+
+
