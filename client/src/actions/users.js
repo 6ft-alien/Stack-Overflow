@@ -9,6 +9,15 @@ export const fetchAllUsers = () => async (dispatch) => {
         console.log(error)
     }
 }
+export const fetchLoginHistory = (id) => async (dispatch) => {
+    try {
+        const { data } = await api.fetchLoginHistory(id)
+        dispatch({ type: 'FETCH_LOGIN_HISTORY', payload: data })
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
 
 export const updateProfile = (id, updateData) => async (dispatch) => {
     try {
