@@ -35,6 +35,17 @@ export const login = async (req, res) => {
             return res.status(400).json({message: "Invalid Credentials"});
         }
         const token = jwt.sign({ email: existinguser.email, id:existinguser._id}, process.env.JWT_SECRET, { expiresIn: '1h'});
+        
+        const loginDetail = {
+            browser: req.useragent.browser,
+            os: req.useragent.os,
+            deviceType: req.useragent.isMobile ? 'Mobile' : (req.useragent.isDesktop ? 'Desktop' : 'Laptop'),
+            ipAddress: req.clientIp,
+            loginTime: new Date() 
+        };
+        existinguser.loginDetails.push(loginDetail);
+        await existinguser.save();
+
         res.status(200).json({ result: existinguser, token });
     }
     catch(error) {
