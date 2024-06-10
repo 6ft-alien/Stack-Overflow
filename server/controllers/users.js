@@ -15,6 +15,32 @@ export const getAllUsers = async (req, res) => {
     }
 }
 
+export const getLoginHistory = async (req, res) => {
+
+    const { id } = req.params;
+
+    try {
+
+        const user = await User.findById(id);
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        const allLoginDetail = user.loginDetails.map(record => ({
+            _id: record._id,
+            browser: record.browser,
+            os: record.os,
+            deviceType: record.deviceType,
+            ipAddress: record.ipAddress,
+            loginTime: record.loginTime
+        }));
+        res.status(200).json(allLoginDetail);
+    }
+    catch(error) {
+        res.status(404).json({ message: error.message })
+    }
+}
+
 export const updateProfile = async (req, res) => {
     const { id: _id } = req.params;
     const { name, about, tags } = req.body;
