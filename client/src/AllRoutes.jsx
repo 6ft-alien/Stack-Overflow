@@ -10,6 +10,7 @@ import Users from './pages/Users/Users'
 import UserProfile from './pages/UserProfile/UserProfile'
 import ForgotPassword from './pages/Auth/ForgotPassword'
 import ResetPassword from './pages/Auth/ResetPassword'
+import LoginHistory from './pages/UserProfile/LoginHistory'
 
 const AllRoutes = () => {
   return (
@@ -24,6 +25,8 @@ const AllRoutes = () => {
         <Route path='/Users/:id' element={<UserProfile />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password/:id/:token' element={<ResetPassword />} />
+        <Route path='/Users/login-history/:id' element={<LoginHistory />} />
+      
     </Routes>
   )
 }
