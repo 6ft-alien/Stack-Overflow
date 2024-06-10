@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://stack-overflow-server-psi.vercel.app/' });
+const API = axios.create({ baseURL: 'http://localhost:5000/' });
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('profile')) {
@@ -24,4 +24,5 @@ export const deleteAnswer = (id, answerId, noOfAnswers) => API.patch(`/answer/de
 
 
 export const fetchAllUsers = () => API.get('/user/getAllUsers');
+export const fetchLoginHistory = (id) => API.get(`/user/login-history/${id}`);
 export const updateProfile = (id, updateData) => API.patch(`/user/update/${id}`, updateData)
