@@ -153,14 +153,14 @@ const Auth = () => {
     { isMobile && !isWithinTimeRange ? (
           <section className="auth-section">
             <div className="auth-container-2">
-              <form>
+              <div className='mobile-login-container'>
                 <h4 className='mobile-login'>
                   You are not allowed to Log In at this time.<br />
                   Try using a PC or a Laptop.<br /><br /><br />
                   Contact the author "6ft-alien"<br />
                   if you think this is a mistake.
                 </h4>
-              </form>
+              </div>
             </div>
           </section>
     ): 
