@@ -11,9 +11,15 @@ import UserProfile from './pages/UserProfile/UserProfile'
 import ForgotPassword from './pages/Auth/ForgotPassword'
 import ResetPassword from './pages/Auth/ResetPassword'
 import LoginHistory from './pages/UserProfile/LoginHistory'
+import useMobileRestriction from './hooks/useMobileRestriction'
+import RestrictedAccess from './components/RestrictedAccess/RestrictedAccess'
 
 const AllRoutes = () => {
-  return (
+    const isMobileRestricted = useMobileRestriction();
+    if (!isMobileRestricted) {
+      return <RestrictedAccess />
+    }
+    return (
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Auth' element={<Auth />} />
@@ -28,7 +34,7 @@ const AllRoutes = () => {
         <Route path='/Users/login-history/:id' element={<LoginHistory />} />
       
     </Routes>
-  )
+    )
 }
 
 export default AllRoutes
