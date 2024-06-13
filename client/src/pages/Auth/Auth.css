@@ -96,6 +96,8 @@
 }
 .auth-container-2 form .otp-field {
     font-family: 'Source Code Pro';
+    padding: 8px;
+    width: -webkit-calc( 100% - 14px );
     font-weight: 600;
     font-size: 18px;
     text-align: center;
