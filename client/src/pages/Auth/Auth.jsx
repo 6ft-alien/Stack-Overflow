@@ -4,13 +4,18 @@ import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import './Auth.css';
 import AboutAuth from './AboutAuth';
-import { signup, login } from '../../actions/auth';
+import { signup, login, checkAuth, sendOTP, verifyOTP } from '../../actions/auth';
+import { isChrome } from 'react-device-detect'
 
 const Auth = () => {
+
+  
   const [isSignup, setIsSignup] = useState(false);
+  const [isOTPSent, setIsOTPSent] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [otp, setOTP] = useState('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -59,7 +64,7 @@ const Auth = () => {
         alert('Password must contain at least eight characters including at least 1 letter and 1 number');
         valid=false;
       }
-      if (!valid === false) {
+      if (valid === true) {
         const response = await dispatch(signup({ name, email, password }, navigate));
       if (!response.success) {
         alert(response.message);
@@ -67,15 +72,62 @@ const Auth = () => {
         alert('Registration successful!');
       }
       }
-    } else {
-      const response = await dispatch(login({ email, password }, navigate));
-      if (!response.success) {
-        alert(response.message);
-      } else {
-        alert('Login successful!');
+    } 
+    else {
+      if(isChrome) {
+        if(isOTPSent) {
+          if(!otp) {
+            alert('OTP is Required')
+            return;
+          }
+          const verified = await dispatch(verifyOTP({ email, otp }))
+            if(!verified.success) {
+              alert(verified.message)
+            }
+            else {
+              const responseChrome = await dispatch(login({ email, password }, navigate));
+              if (!responseChrome.success) {
+                alert(responseChrome.message);
+              } else {
+                alert('Login successful!');
+              }
+            }
+        }
+        else {
+          const check = await dispatch(checkAuth({ email, password }))
+          if(!check.success)
+            {
+              alert(check.message)
+            }
+            else {
+              const response = await dispatch(sendOTP({ email }))
+                if(!response.success) {
+                  alert(response.message)
+                }
+                else {
+                  alert('An OTP has been sent to your mail for verification');
+                  setIsOTPSent(!isOTPSent);
+                }
+            }
+        }
       }
-    }
-  };
+      else {
+          const check = await dispatch(checkAuth({ email, password }))
+          if(!check.success)
+            {
+              alert(check.message)
+            }
+          else {
+              const response = await dispatch(login({ email, password }, navigate));
+              if (!response.success) {
+                alert(response.message);
+              } else {
+                alert('Login successful!');
+              }
+          }
+        }
+      }
+  }
 
   return (
     <section className="auth-section">
@@ -102,6 +154,7 @@ const Auth = () => {
               name="email"
               id="email"
               value={email}
+              disabled={isOTPSent}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
@@ -119,6 +172,7 @@ const Auth = () => {
               name="password"
               id="password"
               value={password}
+              disabled={isOTPSent}
               onChange={(e) => setPassword(e.target.value)}
             />
             {isSignup && (
@@ -131,6 +185,22 @@ const Auth = () => {
               </p>
             )}
           </label>
+
+          {(isChrome && !isSignup) && (
+            <label htmlFor="otp">
+            <h4>OTP</h4>
+            <input
+              className='otp-field'
+              type="text"
+              name="otp"
+              id="otp"
+              disabled={!isOTPSent}
+              value={otp}
+              onChange={(e) => setOTP(e.target.value)}
+            />
+          </label>
+          )}
+
           {isSignup && (
             <label htmlFor="check">
               <input type="checkbox" id="check" name="check" />
@@ -144,7 +214,10 @@ const Auth = () => {
             </label>
           )}
           <button type="submit" className="auth-btn">
-            {isSignup ? 'Sign up' : 'Login'}
+            {isChrome ? (
+              isSignup ? 'Sign up' : isOTPSent ? 'Login' : 'Send OTP'
+            ) :
+            ( isSignup ? 'Sign up' : 'Login' )}
           </button>
           {isSignup && (
             <p style={{ color: '#666767', fontSize: '13px' }}>
