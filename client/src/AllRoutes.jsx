@@ -11,8 +11,8 @@ import UserProfile from './pages/UserProfile/UserProfile'
 import ForgotPassword from './pages/Auth/ForgotPassword'
 import ResetPassword from './pages/Auth/ResetPassword'
 import LoginHistory from './pages/UserProfile/LoginHistory'
-import useMobileRestriction from './hooks/useMobileRestriction'
 import RestrictedAccess from './components/RestrictedAccess/RestrictedAccess'
+import useMobileRestriction from './hooks/useMobileRestriction'
 
 const AllRoutes = () => {
     const isMobileRestricted = useMobileRestriction();
