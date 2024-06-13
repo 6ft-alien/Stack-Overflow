@@ -7,6 +7,8 @@ const userSchema = mongoose.Schema({
     about: {type: String },
     tags: {type: [String] },
     joinedOn: {type: Date, default: Date.now },
+    otp: { type: Number },
+    otpExpiry: { type: Date },
     loginDetails: [{
         browser: { type: String, required: true },
         os: { type: String, required: true },
