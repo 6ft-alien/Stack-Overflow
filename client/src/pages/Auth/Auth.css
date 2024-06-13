@@ -35,13 +35,14 @@
 }
 .auth-container-2 form label input {
     padding: 10px;
-    width: -webkit-calc( 100% - 30px );
+    width: -webkit-calc( 100% - 22px );
     border: 1px solid #0000003e;
     font-size: 13px;
 }
 .auth-container-2 form label:nth-child(1) h4,
 .auth-container-2 form label:nth-child(2) h4,
-.auth-container-2 form label:nth-child(3) h4 {
+.auth-container-2 form label:nth-child(3) h4,
+.auth-container-2 form label:nth-child(4) h4 {
     margin-bottom: 5px;
     margin-top: 10px;
 }
@@ -64,6 +65,7 @@
     transition: 0.5s;
     font-size: 13px;
     font-weight: 500;
+    width: 100%;
 }
 .auth-btn:hover {
     background-color: #018ce3;
@@ -79,4 +81,13 @@
 .forgot {
     text-decoration: none;
     cursor: pointer;
+}
+.auth-container-2 form label input:disabled {
+    background-color: #e2e2e2;
+    border:none;
+}
+.auth-container-2 form label input:disabled:hover {
+    background-color: #e2e2e2;
+    cursor: not-allowed;
+    border:none;
 }
