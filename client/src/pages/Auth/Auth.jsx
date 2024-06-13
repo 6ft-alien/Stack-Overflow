@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import icon from '../../assets/icon.svg';
 import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import './Auth.css';
 import AboutAuth from './AboutAuth';
 import { signup, login, checkAuth, sendOTP, verifyOTP } from '../../actions/auth';
-import { isChrome } from 'react-device-detect'
+import { isChrome, isMobile } from 'react-device-detect'
 
 const Auth = () => {
 
@@ -16,6 +16,25 @@ const Auth = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [otp, setOTP] = useState('');
+  const [isWithinTimeRange, setIsWithinTimeRange] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date();
+      const start = new Date();
+      start.setHours(10, 0, 0);
+      const end = new Date();
+      end.setHours(13, 0, 0);
+
+      if (now >= start && now <= end) {
+        setIsWithinTimeRange(true);
+      } else {
+        setIsWithinTimeRange(false);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -130,6 +149,22 @@ const Auth = () => {
   }
 
   return (
+    <>
+    { isMobile && !isWithinTimeRange ? (
+          <section className="auth-section">
+            <div className="auth-container-2">
+              <form>
+                <h4 className='mobile-login'>
+                  You are not allowed to Log In at this time.<br />
+                  Try using a PC or a Laptop.<br /><br /><br />
+                  Contact the author "6ft-alien"<br />
+                  if you think this is a mistake.
+                </h4>
+              </form>
+            </div>
+          </section>
+    ): 
+    (
     <section className="auth-section">
       {isSignup && <AboutAuth />}
       <div className="auth-container-2">
@@ -236,6 +271,8 @@ const Auth = () => {
         </p>
       </div>
     </section>
+            )}
+    </>
   );
 };
 
