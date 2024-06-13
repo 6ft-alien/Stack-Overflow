@@ -11,6 +11,9 @@ API.interceptors.request.use((req) => {
 
 export const logIn = (authData) => API.post('/user/login', authData);
 export const signUp = (authData) => API.post('/user/signup', authData);
+export const checkAuth = (authData) => API.post('/user/check-auth', authData);
+export const sendOTP = (email) => API.post('/user/send-otp', { email });
+export const verifyOTP = (otpData) => API.post('/user/verify-otp', otpData);
 export const forgotPassword = (email) => API.post('/user/forgot-password', email);
 export const resetPassword = (id, token, password) => API.patch(`/user/reset-password/${id}/${token}`, { password });
 
