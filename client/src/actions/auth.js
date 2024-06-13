@@ -27,6 +27,45 @@ export const login = (authData, navigate) => async (dispatch) => {
     }
 };
 
+export const checkAuth = (authData) => async (dispatch) => {
+    dispatch({ type: 'CHECK_AUTH_REQUEST' });
+    try {
+        const { data } = await api.checkAuth(authData);
+        dispatch({ type: 'CHECK_AUTH_SUCCESS', data });
+        return { success: true, data };
+    } catch (error) {
+        console.error('Error during authentication:', error.response?.data?.message || error.message);
+        dispatch({ type: 'CHECK_AUTH_FAILURE', error: error.response?.data?.message || 'An error occurred during authentication.' });
+        return { success: false, message: error.response?.data?.message || 'An error occurred during check authentication.' };
+    }
+};
+
+export const sendOTP = (email) => async (dispatch) => {
+    dispatch({ type: 'SEND_OTP_REQUEST' });
+    try {
+        const { data } = await api.sendOTP(email);
+        dispatch({ type: 'SEND_OTP_SUCCESS', data });
+        return { success: true, data };
+    } catch (error) {
+        console.error('Error during send OTP:', error.response?.data?.message || error.message);
+        dispatch({ type: 'SEND_OTP_FAILURE', error: error.response?.data?.message || 'An error occurred during send OTP.' });
+        return { success: false, message: error.response?.data?.message || 'An error occurred during send OTP.' };
+    }
+};
+
+export const verifyOTP = (otpData) => async (dispatch) => {
+    dispatch({ type: 'VERIFY_OTP_REQUEST' });
+    try {
+        const { data } = await api.verifyOTP(otpData);
+        dispatch({ type: 'VERIFY_OTP_SUCCESS', data });
+        return { success: true, data };
+    } catch (error) {
+        console.error('Error during verify OTP:', error.response?.data?.message || error.message);
+        dispatch({ type: 'VERIFY_OTP_FAILURE', error: error.response?.data?.message || 'An error occurred during verify OTP.' });
+        return { success: false, message: error.response?.data?.message || 'An error occurred during verify OTP.' };
+    }
+};
+
 export const forgotPassword = (email) => async (dispatch) => {
     dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
     try {
