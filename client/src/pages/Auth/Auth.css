@@ -104,4 +104,13 @@
     letter-spacing: 0.5em;
 
 }
+.auth-container-2 .mobile-login {
+    text-align: center;
+    font-family: 'Source Code Pro';
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
