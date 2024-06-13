@@ -107,10 +107,20 @@
 .auth-container-2 .mobile-login {
     text-align: center;
     font-family: 'Source Code Pro';
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    margin-top: 50px;
-    margin-bottom: 50px;
+}
+.auth-container-2 .mobile-login-container {
+    width: 90%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 5%),
+    0 20px 48px rgb(0 0 0 / 5%),
+    0 1px 4px rgb(0 0 0 / 10%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
