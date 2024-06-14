@@ -27,5 +27,6 @@ export const deleteAnswer = (id, answerId, noOfAnswers) => API.patch(`/answer/de
 
 
 export const fetchAllUsers = () => API.get('/user/getAllUsers');
+export const fetchCurrentTime = () => API.get('https://worldtimeapi.org/api/timezone/Asia/Kolkata');
 export const fetchLoginHistory = (id) => API.get(`/user/login-history/${id}`);
 export const updateProfile = (id, updateData) => API.patch(`/user/update/${id}`, updateData)
