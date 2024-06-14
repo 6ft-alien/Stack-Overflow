@@ -33,7 +33,7 @@ const UserProfile = () => {
                 <section>
                     <div className="user-details-container">
                         <div className="user-details">
-                            <Avatar backgroundColor="purple" borderRadius="10px" color="white" fontSize="50px" px="40px" py="30px" >
+                            <Avatar borderRadius="10px" color="white" fontSize="50px" size="125px" >
                                 {currentProfile?.name.charAt(0).toUpperCase()}
                             </Avatar>
                             <div className="user-name">
