@@ -169,7 +169,7 @@ const Auth = () => {
       {isSignup && <AboutAuth />}
       <div className="auth-container-2">
         {!isSignup && <img src={icon} alt="stack overflow" className="login-logo" />}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={isSignup ? { marginTop: "60px"}:{}}>
           {isSignup && (
             <label htmlFor="name">
               <h4>Display Name</h4>
