@@ -12,13 +12,7 @@ const useMobileRestriction = () => {
                 const currentTimeIST = new Date(response.data.datetime);
                 const currentHour = currentTimeIST.getHours();
 
-                console.log(`Current Time (IST):`, currentTimeIST.toString());
-                console.log(`Current Hour in IST:`, currentHour);
-
-                const startHour = 10;
-                const endHour = 13;
-
-                if (isMobileOnly && (currentHour >= startHour && currentHour < endHour)) {
+                if (isMobileOnly && (currentHour >= 10 && currentHour < 13)) {
                     setIsRestricted(false);
                 } else {
                     if(isMobileOnly){   
