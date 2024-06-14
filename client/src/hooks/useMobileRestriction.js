@@ -30,7 +30,6 @@ const useMobileRestriction = () => {
                 }
             } catch (error) {
                 console.error('Error fetching the current time:', error);
-                setIsRestricted(true);
             }
         };
 
