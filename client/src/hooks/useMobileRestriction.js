@@ -7,11 +7,9 @@ const useMobileRestriction = () => {
     const currentHour = now.getHours();
 
     if (isMobileOnly && (currentHour >= startHour && currentHour < endHour)) {
-        return true;
-    }
-    else {
         return false;
     }
+    return isMobileOnly;
 };
 
 export default useMobileRestriction;
