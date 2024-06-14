@@ -1,20 +1,35 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { isMobileOnly } from 'react-device-detect';
 import { toZonedTime } from 'date-fns-tz';
 
 const useMobileRestriction = () => {
-    const startHour = 10;
-    const endHour = 13;
+    const [isRestricted, setIsRestricted] = useState(true);
 
-    const timeZone = 'Asia/Kolkata'; //IST Time
+    useEffect(() => {
+        const fetchCurrentTime = async () => {
+            try {
+                const response = await axios.get('http://worldtimeapi.org/api/timezone/Etc/UTC');
+                const utcTime = new Date(response.data.utc_datetime);
+                
+                const timeZone = 'Asia/Kolkata';   // IST timezone
+                const zonedTime = toZonedTime(utcTime, timeZone);
+                const currentHour = zonedTime.getHours();
 
-    const now = new Date();
-    const zonedTime = toZonedTime(now, timeZone);
-    const currentHour = zonedTime.getHours();
+                if (isMobileOnly && (currentHour >= 10 && currentHour < 13)) {
+                    setIsRestricted(false); 
+                } else {
+                    setIsRestricted(isMobileOnly);
+                }
+            } catch (error) {
+                console.error('Error fetching the current time:', error);
+            }
+        };
 
-    if (isMobileOnly && (currentHour >= startHour && currentHour < endHour)) {
-        return false;
-    }
-    return isMobileOnly;
+        fetchCurrentTime();
+    }, []);
+
+    return isRestricted;
 };
 
 export default useMobileRestriction;
