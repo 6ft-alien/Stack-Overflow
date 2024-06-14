@@ -6,11 +6,11 @@ const useMobileRestriction = () => {
     const now = new Date();
     const currentHour = now.getHours();
 
-    if (isMobileOnly && (currentHour < startHour || currentHour >= endHour)) {
+    if (isMobileOnly && (currentHour >= startHour && currentHour < endHour)) {
         return true;
     }
     else {
-        return isMobileOnly;
+        return false;
     }
 };
 
