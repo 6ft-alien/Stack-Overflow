@@ -5,7 +5,7 @@ const useMobileRestriction = () => {
     const startHour = 10;
     const endHour = 13;
 
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const timeZone = 'Asia/Kolkata'; //IST Time
 
     const now = new Date();
     const zonedTime = toZonedTime(now, timeZone);
