@@ -8,7 +8,7 @@ const useMobileRestriction = () => {
     useEffect(() => {
         const fetchCurrentTime = async () => {
             try {
-                const response = await axios.get('http://worldtimeapi.org/api/timezone/Asia/Kolkata');
+                const response = await axios.get('https://worldtimeapi.org/api/timezone/Asia/Kolkata');
                 const currentTimeIST = new Date(response.data.datetime);
                 const currentHour = currentTimeIST.getHours();
 
