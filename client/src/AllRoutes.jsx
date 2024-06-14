@@ -15,8 +15,8 @@ import RestrictedAccess from './components/RestrictedAccess/RestrictedAccess'
 import useMobileRestriction from './hooks/useMobileRestriction'
 
 const AllRoutes = () => {
-    const isMobileRestricted = useMobileRestriction();
-    if (!isMobileRestricted) {
+    const isMobileAllowed = useMobileRestriction();
+    if (!isMobileAllowed) {
       return <RestrictedAccess />
     }
     return (
