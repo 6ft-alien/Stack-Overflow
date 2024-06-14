@@ -47,7 +47,7 @@ const Navbar = () => {
         </form>
         {User?.result?.name ? (
           <>
-            <Avatar backgroundColor='#009dff' borderRadius="50%" px="10px" py="7px" color='white'>
+            <Avatar backgroundColor='#009dff' borderRadius="100%" color='white' size="33px" fontWeight="600">
               <Link to={`/Users/${User?.result?._id}`} style={{ color: "white", textDecoration: "none" }}>
                 {User.result.name.charAt(0).toUpperCase()}
               </Link>
