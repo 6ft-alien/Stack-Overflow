@@ -11,7 +11,7 @@ const RestrictedAccess = () => (
           our website at this time.<br /><br />
           Try using a PC or a Laptop.<br /><br />
           WEBSITE TIMINGS ON MOBILE:<br />
-          10:00 AM - 1:00 PM
+          10:00 AM - 1:00 PM IST
         </h4>
       </div>
     </div>
