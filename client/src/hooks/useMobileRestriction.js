@@ -3,7 +3,7 @@ import { isMobileOnly } from 'react-device-detect';
 import { fetchCurrentTime } from '../utils/currentTime';
 
 const useMobileRestriction = () => {
-    const [isRestricted, setIsRestricted] = useState(true);
+    const [isRestricted, setIsRestricted] = useState(false);
 
     useEffect(() => {
         const checkAccess = async () => {
