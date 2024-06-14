@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { isMobileOnly } from 'react-device-detect';
+import { fetchCurrentTime } from '../utils/currentTime';
 
 const useMobileRestriction = () => {
     const [isRestricted, setIsRestricted] = useState(false);
 
     useEffect(() => {
-        const fetchCurrentTime = async () => {
+        const checkAccess = async () => {
             try {
-                const response = await axios.get('https://worldtimeapi.org/api/timezone/Asia/Kolkata');
-                const currentTimeIST = new Date(response.data.datetime);
+                const currentTimeIST = await fetchCurrentTime();
                 const currentHour = currentTimeIST.getHours();
 
                 if (isMobileOnly && (currentHour >= 10 && currentHour < 13)) {
@@ -27,7 +26,7 @@ const useMobileRestriction = () => {
             }
         };
 
-        fetchCurrentTime();
+        checkAccess();
     }, []);
 
     return isRestricted;
