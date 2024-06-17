@@ -85,19 +85,16 @@
 }
 .navbar .select-container {
     position: relative;
-    height: 40px;
-    width: 140px;
+    height: 30px;
+    width: 120px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 15px;
-    font-weight: 500;
-    color: rgb( 69, 69, 69 );
     transition: 0.2s;
-    border-radius: 20px;
     border: 2px solid  rgb( 226, 226, 226);
+    border-radius: 20px;
     background-color: transparent;
 }
 .navbar .select-container:hover {
@@ -110,8 +107,8 @@
     left: 10px;
     transform: translateY(-50%);
     pointer-events: none;
-    width: 20px; 
-    height: 20px; 
+    width: 18px; 
+    height: 18px; 
     background-image: url('../../assets/globe-solid.svg'); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,9 +129,11 @@
     font-size: large;
     padding: 10px;
     height: 40px;
-    border: 2px solid  rgb( 226, 226, 226);
 }
 .navbar .select-label {
     position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb( 69, 69, 69 );
 }
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
