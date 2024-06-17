@@ -129,6 +129,8 @@
     background-color: rgb( 226, 226, 226);
     font-family: 'Source Code Pro';
     font-size: large;
+    padding: 10px;
+    height: 40px;
 }
 .navbar .select-label {
     position: relative;
