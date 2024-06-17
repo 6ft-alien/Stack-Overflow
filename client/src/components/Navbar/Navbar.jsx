@@ -14,6 +14,21 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const User = useSelector((state) => state.currentUserReducer);
+  const [selectedOption, setSelectedOption] = useState('English');
+
+  const updateLabel = (event) => {
+    const select = event.target;
+    const selectedOption = select.options[select.selectedIndex].text;
+    setSelectedOption(selectedOption);
+  };
+
+  useEffect(() => {
+    const select = document.getElementById('mySelect');
+    if (select) {
+      const initialOption = select.options[select.selectedIndex].text;
+      setSelectedOption(initialOption);
+    }
+  }, []);
 
   const handleLogOut = () => {
     dispatch({ type: 'LOGOUT' });
@@ -45,6 +60,19 @@ const Navbar = () => {
           <input type="text" placeholder='Search...' />
           <img src={Search} alt="Search" className='search-icon' width={18} />
         </form>
+        <div className="select-container">
+          <div>
+            <select id="mySelect" onChange={updateLabel}>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+              <option value="hindi">Hindi</option>
+              <option value="portuguese">Portuguese</option>
+              <option value="chinese">Chinese</option>
+              <option value="french">French</option>
+            </select>
+          </div>
+          <div className="select-label" id="selectLabel">{selectedOption}</div>
+        </div>
         {User?.result?.name ? (
           <>
             <Avatar backgroundColor='#009dff' borderRadius="100%" color='white' size="33px" fontWeight="600">
