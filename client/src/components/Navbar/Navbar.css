@@ -131,6 +131,7 @@
     font-size: large;
     padding: 10px;
     height: 40px;
+    border: 2px solid  rgb( 226, 226, 226);
 }
 .navbar .select-label {
     position: relative;
