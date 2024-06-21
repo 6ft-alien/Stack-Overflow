@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import icon from '../../assets/icon.svg';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { resetPassword } from '../../actions/auth';
 import './Auth.css';
 
 const ResetPassword = () => {
+    const { t } = useTranslation();
     const { id, token } = useParams();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -14,46 +16,38 @@ const ResetPassword = () => {
     const dispatch = useDispatch();
     const resetPasswordStatus = useSelector(state => state.auth.resetPasswordStatus);
 
-    var valid = true;
-    
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!password) {
-          alert('Enter Password');
-          return;
-        }
-        if (password.length<8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-          alert('Password must contain at least eight characters including at least 1 letter and 1 number');
-          valid=false;
+          alert(t('resetPassword.enterPasswordAlert'));
           return;
         }
         if (!confirmPassword) {
-          alert('All fields are important');
+          alert(t('resetPassword.fieldsRequiredAlert'));
           return;
         }
         if (password !== confirmPassword) {
-            alert('Confirm Password must be same as New Password');
+            alert(t('resetPassword.passwordMismatchAlert'));
             return;
         }
-        if (!valid === false) {
-          const result = await dispatch(resetPassword({id, token, password}, navigate));
-          if (result.success) {
-              alert('Password Reset Successful!\nLOGIN to continue...')
-              navigate('/Auth');
-          } else {
-              alert(result.message);
-          }
-      }
-    }
+        
+        const result = await dispatch(resetPassword({id, token, password}, navigate));
+        if (result.success) {
+            alert(t('resetPassword.successMessage'));
+            navigate('/Auth');
+        } else {
+            alert(t('resetPassword.errorMessage'));
+        }
+    };
 
     return (
         <section className="auth-section">
             <div className="auth-container-2">
                 <img src={icon} alt="stack overflow" className="login-logo" />
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} style={{width: "320px"}}>
                     <label htmlFor="password">
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <h4>New Password</h4>
+                            <h4>{t('resetPassword.newPassword')}</h4>
                         </div>
                         <input
                             type="password"
@@ -66,7 +60,7 @@ const ResetPassword = () => {
 
                     <label htmlFor="confirmPassword">
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <h4>Confirm New Password</h4>
+                            <h4>{t('resetPassword.confirmNewPassword')}</h4>
                         </div>
                         <input
                             type="password"
@@ -76,11 +70,11 @@ const ResetPassword = () => {
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                         <p style={{ color: '#666767', fontSize: '13px' }}>
-                            Passwords must contain at least eight characters,<br /> including at least 1 letter and 1 number.
+                            {t('resetPassword.passwordRequirements')}
                         </p>
                     </label>
                     <button type="submit" className="auth-btn">
-                        {resetPasswordStatus === 'loading' ? 'Updating...' : 'Update Password'}
+                        {resetPasswordStatus === 'loading' ? t('resetPassword.updatingButton') : t('resetPassword.updatePasswordButton')}
                     </button>
                 </form>
             </div>
