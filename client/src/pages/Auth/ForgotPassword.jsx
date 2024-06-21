@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import icon from '../../assets/icon.svg';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import './Auth.css';
 import { forgotPassword } from '../../actions/auth';
 
 const ForgotPassword = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState('');
 
     const navigate = useNavigate();
@@ -14,17 +16,16 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!email) {
-            alert('Enter Email');
+            alert(t('forgotPassword.alertMessage'));
             return;
-        }
-        else {
+        } else {
             const response = await dispatch(forgotPassword({ email }));
             if (response.success) {
-                alert('A password reset link has been sent to registered email')
+                alert(t('forgotPassword.successMessage'));
                 navigate('/Auth');
             } else {
                 console.error(response.message);
-                alert('Invalid E-Mail');
+                alert(t('forgotPassword.errorMessage'));
             }
         }
     };
@@ -35,7 +36,7 @@ const ForgotPassword = () => {
                 <img src={icon} alt="stack overflow" className="login-logo" />
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="email">
-                        <h4>Enter Account E-Mail</h4>
+                        <h4>{t('forgotPassword.title')}</h4>
                         <input
                             type="email"
                             name="email"
@@ -44,7 +45,7 @@ const ForgotPassword = () => {
                         />
                     </label>
                     <button type="submit" className="auth-btn">
-                        Send Password Reset Link
+                        {t('forgotPassword.button')}
                     </button>
                 </form>
             </div>
