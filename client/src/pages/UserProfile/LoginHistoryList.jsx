@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
 import { useSelector } from 'react-redux';
-import History from "./History";
+import { useTranslation } from 'react-i18next';
+import History from './History';
 import './LoginHistory.css';
 
 const LoginHistoryList = () => {
+    const { t } = useTranslation();
     const loginHistory = useSelector((state) => state.loginHistoryReducer);
 
     return (
@@ -12,11 +14,11 @@ const LoginHistoryList = () => {
                 <table className="table-container">
                     <thead>
                         <tr>
-                            <th>Browser</th>
-                            <th>OS</th>
-                            <th>Device Type</th>
-                            <th>IP Address</th>
-                            <th>Login Time</th>
+                            <th>{t('loginHistory.browser')}</th>
+                            <th>{t('loginHistory.os')}</th>
+                            <th>{t('loginHistory.deviceType')}</th>
+                            <th>{t('loginHistory.ipAddress')}</th>
+                            <th>{t('loginHistory.loginTime')}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +28,7 @@ const LoginHistoryList = () => {
                     </tbody>
                 </table>
             ) : (
-                <p>No login history available.</p>
+                <p>{t('loginHistory.noHistory')}</p>
             )}
         </div>
     );
