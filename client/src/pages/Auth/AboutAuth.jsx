@@ -1,17 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const AboutAuth = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="auth-container-1">
-        <h1>Join the Stack Overflow Community</h1>
-        <p>Get unstuck - ask a question</p>
-        <p>Unlock new privileges like voting and commenting</p>
-        <p>Save your favorite tags, filters, and jobs</p>
-        <p>Earn reputation and badges</p>
-        <p style={{color: "#666767", fontSize:"13px"}}>Collaborate and share knowledge with a provate group for</p>
-        <p style={{color: "#007ac6", fontSize:"13px"}}>Get Stack Overflow for Teams free upto 50 users</p>
+      <h1>{t('authPage.aboutAuth.title')}</h1>
+      <p>{t('authPage.aboutAuth.line1')}</p>
+      <p>{t('authPage.aboutAuth.line2')}</p>
+      <p>{t('authPage.aboutAuth.line3')}</p>
+      <p>{t('authPage.aboutAuth.line4')}</p>
+      <p style={{color: "#666767", fontSize:"13px"}}>{t('authPage.aboutAuth.line5')}</p>
+      <p style={{color: "#007ac6", fontSize:"13px"}}>{t('authPage.aboutAuth.line6')}</p>
     </div>
-  )
-}
+  );
+};
 
-export default AboutAuth
+export default AboutAuth;
