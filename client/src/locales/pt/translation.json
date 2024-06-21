@@ -1,0 +1,216 @@
+{
+    "nav": {
+      "about": "Sobre",
+      "products": "Produtos",
+      "forTeams": "Para Equipas",
+      "search": "Procurar...",
+      "logIn": "Iniciar Sessão",
+      "logOut": "Terminar Sessão"
+    },
+    "home": {
+      "topQuestions": "Principais Perguntas",
+      "allQuestions": "Todas as Perguntas",
+      "askQuestion": "Fazer uma Pergunta",
+      "loading": "Carregando...",
+      "questionsCount": "{{count}} perguntas",
+      "loginToAskQuestion": "Faça login ou cadastre-se para fazer uma pergunta"
+    },
+    "quesList": {
+      "votes": "votos",
+      "answers": "respostas",
+      "asked": "perguntado {{time}} - {{user}}"
+    },
+    "leftbar": {
+        "home": "Lar",
+        "public": "PÚBLICO",
+        "questions": "Questões",
+        "tags": "Tags",
+        "users": "Usuários"
+    },
+    "restrictedAccess": {
+        "line1": "Você não tem permissão para visitar",
+        "line2": "nosso site neste momento.",
+        "line3": "Tente usar um PC ou laptop.",
+        "line4": "HORÁRIO DO SITE NO MOBILE:",
+        "line5": "10:00 AM - 1:00 PM IST"
+    },
+    "rightbar": {
+        "blogTitle": "O Blog do Overflow",
+        "blog1": "Observabilidade é a chave para o futuro do software (e sua carreira em DevOps)",
+        "blog2": "Podcast 374: Quão valioso é o seu nome de tela?",
+        "metaTitle": "Destaque no Meta",
+        "meta1": "Fluxos de trabalho da fila de revisão - Lançamento final...",
+        "meta2": "Por favor, dê boas-vindas aos Associados Valiosos: #958 - V2Blast #959 - SpencerG",
+        "meta3": "Respostas desatualizadas: a resposta aceita agora não está fixada no Stack Overflow",
+        "hotMetaTitle": "Postagens Meta Quentes",
+        "hotMeta1": "Por que esta bandeira de spam foi rejeitada, mas a pergunta foi marcada como spam?",
+        "hotMeta2": "Qual é o melhor curso de ação quando um usuário tem reputação suficiente para...",
+        "hotMeta3": "Um link para a página de ajuda 'Como perguntar' é um comentário útil?",
+        "watchedTags": "Tags Observadas"
+    },
+    "askQues": {
+        "title": "Fazer uma pergunta pública",
+        "labels": {
+            "title": "Título",
+            "body": "Corpo",
+            "tags": "Tags"
+        },
+        "descriptions": {
+            "title": "Seja específico e imagine que está fazendo uma pergunta para outra pessoa",
+            "body": "Inclua todas as informações que alguém precisaria para responder sua pergunta",
+            "tags": "Adicione até 5 tags para descrever sobre o que é sua pergunta"
+        },
+        "placeholders": {
+            "title": "Por exemplo: Existe uma função R para encontrar o índice de um elemento em um vetor?",
+            "body": "Inclua todas as informações que alguém precisaria para responder sua pergunta",
+            "tags": "Por exemplo: (xml typescript wordpress)"
+        },
+        "buttons": {
+            "review": "Rever sua pergunta"
+        },
+        "alerts": {
+          "enterTitleBody": "Insira o título e o corpo da pergunta.",
+          "enterTitle": "Insira o título da pergunta.",
+          "enterBody": "Insira o corpo da pergunta."
+        }
+    },
+    "authPage": {
+        "labels": {
+          "displayName": "Nome de Exibição",
+          "email": "Email",
+          "password": "Senha",
+          "otp": "OTP"
+        },
+        "passwordRequirements": "As senhas devem conter pelo menos oito caracteres, incluindo pelo menos 1 letra e 1 número.",
+        "checkBoxText": "Optar por receber atualizações ocasionais de produtos, convites para pesquisa de usuários, anúncios da empresa e resumos.",
+        "termsOfService": "Ao clicar em \"Cadastre-se\", você concorda com nossos",
+        "termsLinks": {
+          "terms": "termos de serviço",
+          "privacyPolicy": "política de privacidade",
+          "cookiePolicy": "política de cookies"
+        },
+        "buttons": {
+          "signup": "Inscrever-se",
+          "login": "Entrar",
+          "sendOTP": "Enviar OTP"
+        },
+        "forgotPasswordLink": "Esqueceu sua senha?",
+        "switchButtonText": {
+          "login": "Entrar",
+          "signup": "Inscrever-se"
+        },
+        "and": "e",
+        "alreadyHaveAccountText": "Já tem uma conta?",
+        "dontHaveAccountText": "Não tem uma conta?",
+        "aboutAuth": {
+          "title": "Junte-se à comunidade Stack Overflow",
+          "line1": "Desbloqueie - faça uma pergunta",
+          "line2": "Desbloqueie novos privilégios como votar e comentar",
+          "line3": "Salve suas tags, filtros e empregos favoritos",
+          "line4": "Ganhe reputação e emblemas",
+          "line5": "Colabore e compartilhe conhecimento com um grupo privado para",
+          "line6": "Obtenha Stack Overflow para equipes grátis até 50 usuários"
+        },
+        "alerts": {
+          "enterNameEmailPassword": "Digite Nome, Email e Senha",
+          "enterNameEmail": "Digite Nome e Email",
+          "enterEmailPassword": "Digite Email e Senha",
+          "enterEmail": "Digite Email",
+          "enterPassword": "Digite Senha",
+          "enterName": "Digite Nome",
+          "passwordRequirements": "A senha deve conter pelo menos oito caracteres, incluindo pelo menos 1 letra e 1 número",
+          "registrationSuccess": "Registro bem-sucedido!",
+          "otpRequired": "OTP é obrigatório",
+          "otpSent": "Um OTP foi enviado para seu email para verificação",
+          "loginSuccess": "Login bem-sucedido!"
+        }
+    },
+    "forgotPassword": {
+        "title": "Digite o e-mail da conta",
+        "button": "Enviar link de redefinição de senha",
+        "successMessage": "Um link de redefinição de senha foi enviado para o e-mail registrado",
+        "errorMessage": "E-mail inválido",
+        "alertMessage": "Digite o e-mail"
+    },
+    "resetPassword": {
+        "newPassword": "Nova Senha",
+        "confirmNewPassword": "Confirmar Nova Senha",
+        "passwordRequirements": "As senhas devem conter pelo menos oito caracteres, incluindo pelo menos 1 letra e 1 número.",
+        "updatePasswordButton": "Atualizar Senha",
+        "updatingButton": "Atualizando...",
+        "enterPasswordAlert": "Digite a Senha",
+        "fieldsRequiredAlert": "Todos os campos são importantes",
+        "passwordMismatchAlert": "A confirmação da senha deve ser igual à nova senha",
+        "successMessage": "Redefinição de senha bem-sucedida!\nFAÇA LOGIN para continuar...",
+        "errorMessage": "Falha na redefinição da senha"
+    },
+    "dispAns": {
+        "shareButton": "Compartilhar",
+        "deleteButton": "Excluir",
+        "answeredOn": "respondido"
+    },
+    "quesDetails": {
+        "loading": "Carregando...",
+        "shareButton": "Compartilhar",
+        "deleteButton": "Excluir",
+        "asked": "perguntou",
+        "answers": "Respostas",
+        "yourAnswer": "Sua Resposta",
+        "postYourAnswer": "Poste Sua Resposta",
+        "browseOtherQuestions": "Navegue por outras perguntas etiquetadas",
+        "askYourQuestion": "faça sua pergunta.",
+        "or": "ou"
+    },
+    "tagPage": {
+        "tags": "Tags",
+        "description1": "Uma tag é uma palavra-chave ou etiqueta que categoriza sua pergunta com outras perguntas semelhantes.",
+        "description2": "Usar as tags certas facilita para os outros encontrarem e responderem à sua pergunta."
+    },
+    "tagList": {
+        "javascript": "Para perguntas sobre programação em ECMAScript (JavaScript/JS) e seus diversos dialetos/implementações (excluindo ActionScript). Por favor, inclua todas as tags relevantes em sua pergunta.",
+        "python": "Python é uma linguagem de programação multiparadigma, dinamicamente tipada e multipropósito. Foi projetada para ser rápida de aprender, entender e usar, e aplica uma sintaxe limpa e uniforme.",
+        "csharp": "C# (pronunciado 'si sharp') é uma linguagem de programação de alto nível, tipada estaticamente e multiparadigma desenvolvida pela Microsoft.",
+        "java": "Java é uma linguagem de programação orientada a objetos de alto nível. Use esta tag quando você estiver com problemas para usar ou entender a própria linguagem.",
+        "php": "PHP é uma linguagem de script amplamente usada, de código aberto, de propósito geral, multiparadigma, dinamicamente tipada e interpretada, originalmente projetada para desenvolvimento web do lado do servidor.",
+        "html": "HTML (HyperText Markup Language) é a linguagem de marcação para criar páginas da web e outras informações a serem exibidas em um navegador da web.",
+        "android": "Android é o sistema operacional móvel do Google, usado para programar ou desenvolver dispositivos digitais (Smartphones, Tablets, Automóveis, TVs, Wear, Glass, IoT).",
+        "css": "CSS é uma linguagem de folhas de estilo de representação usada para descrever a aparência e a formatação de documentos HTML, XML e elementos SVG, incluindo cores, layout, fontes e animações.",
+        "reactjs": "React é uma biblioteca JavaScript para construção de interfaces de usuário. Ele usa um paradigma declarativo, baseado em componentes e visa ser eficiente e flexível.",
+        "nodejs": "Node.js é um runtime de I/O assíncrono, não bloqueante, baseado em eventos que usa o mecanismo JavaScript V8 do Google e a biblioteca libuv."
+    },
+    "editProfile": {
+        "title": "Edite seu perfil",
+        "publicInfo": "Informação pública",
+        "displayName": "Nome de exibição",
+        "aboutMe": "Sobre mim",
+        "tags": "Tags",
+        "tagsDescription": "Adicionar tags separadas por 1 espaço",
+        "saveProfile": "Salvar perfil",
+        "cancel": "Cancelar",
+        "updateSuccess": "Perfil atualizado com sucesso"
+    },
+    "loginHistory": {
+        "browser": "Navegador",
+        "os": "SO",
+        "deviceType": "Tipo de Dispositivo",
+        "ipAddress": "Endereço IP",
+        "loginTime": "Hora de Login",
+        "noHistory": "Nenhum histórico de login disponível.",
+        "loginHistory": "Histórico de Login"
+    },
+    "proBio": {
+      "tags": "Tags",
+      "zeroTags": "0 Tags",
+      "about": "Sobre",
+      "noBioFound": "Nenhuma biografia encontrada"
+    },
+    "userProfile": {
+      "joined": "Entrou",
+      "editProfile": "Editar Perfil",
+      "loginHistory": "Histórico de Login"
+    },
+    "usersPage": {
+      "title": "Usuários"
+    }
+}
+  
