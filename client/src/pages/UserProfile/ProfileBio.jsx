@@ -1,13 +1,16 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
-const ProfileBio = ({currentProfile}) => {
+const ProfileBio = ({ currentProfile }) => {
+    const { t } = useTranslation();
+
     return (
         <div>
             <div>
                 {
-                    currentProfile?.tags.length != 0 ? (
+                    currentProfile?.tags.length !== 0 ? (
                         <>
-                            <h4>Tags</h4>
+                            <h4>{t('proBio.tags')}</h4>
                             {
                                 currentProfile?.tags.map((tag) => (
                                     <p key={tag}>{tag}</p>
@@ -15,7 +18,7 @@ const ProfileBio = ({currentProfile}) => {
                             }
                         </>
                     ) : (
-                        <p>0 Tags</p>
+                        <p>{t('proBio.zeroTags')}</p>
                     )
                 }
             </div>
@@ -23,11 +26,11 @@ const ProfileBio = ({currentProfile}) => {
                 {
                     currentProfile?.about ? (
                         <>
-                            <h4>About</h4>
+                            <h4>{t('proBio.about')}</h4>
                             <p>{currentProfile?.about}</p>
                         </>
                     ) : (
-                        <p>No bio found</p>
+                        <p>{t('proBio.noBioFound')}</p>
                     )
                 }
             </div>
@@ -35,4 +38,4 @@ const ProfileBio = ({currentProfile}) => {
     )
 }
 
-export default ProfileBio
+export default ProfileBio;
