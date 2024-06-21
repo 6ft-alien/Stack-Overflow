@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {jwtDecode} from 'jwt-decode';
-
+import { jwtDecode } from 'jwt-decode';
+import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.svg';
 import Search from '../../assets/search.svg';
 import Avatar from '../../components/Avatar/Avatar';
@@ -12,23 +12,27 @@ import { setCurrentUser } from '../../actions/currentUser';
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   const User = useSelector((state) => state.currentUserReducer);
   const [selectedOption, setSelectedOption] = useState('English');
 
-  const updateLabel = (event) => {
-    const select = event.target;
-    const selectedOption = select.options[select.selectedIndex].text;
-    setSelectedOption(selectedOption);
+  const updateLanguage = (event) => {
+    const selectedLang = event.target.value;
+    i18n.changeLanguage(selectedLang);
+    localStorage.setItem('language', selectedLang);
+    setSelectedOption(event.target.options[event.target.selectedIndex].text);
   };
 
   useEffect(() => {
     const select = document.getElementById('mySelect');
     if (select) {
+      const storedLang = localStorage.getItem('language') || 'en';
+      i18n.changeLanguage(storedLang);
       const initialOption = select.options[select.selectedIndex].text;
       setSelectedOption(initialOption);
     }
-  }, []);
+  }, [i18n]);
 
   const handleLogOut = () => {
     dispatch({ type: 'LOGOUT' });
@@ -53,22 +57,22 @@ const Navbar = () => {
         <Link to='/' className='nav-item nav-logo'>
           <img src={logo} alt="logo" height="30" />
         </Link>
-        <Link to='/' className='nav-item nav-btn'>About</Link>
-        <Link to='/' className='nav-item nav-btn'>Products</Link>
-        <Link to='/' className='nav-item nav-btn'>For Teams</Link>
+        <Link to='/' className='nav-item nav-btn'>{t('nav.about')}</Link>
+        <Link to='/' className='nav-item nav-btn'>{t('nav.products')}</Link>
+        <Link to='/' className='nav-item nav-btn'>{t('nav.forTeams')}</Link>
         <form>
-          <input type="text" placeholder='Search...' />
+          <input type="text" placeholder={t('nav.search')} />
           <img src={Search} alt="Search" className='search-icon' width={18} />
         </form>
         <div className="select-container">
           <div>
-            <select id="mySelect" onChange={updateLabel}>
-            <option value="english">English</option>
-            <option value="spanish">Spanish</option>
-              <option value="hindi">Hindi</option>
-              <option value="portuguese">Portuguese</option>
-              <option value="chinese">Chinese</option>
-              <option value="french">French</option>
+            <select id="mySelect" onChange={updateLanguage} value={localStorage.getItem('language') || 'en'}>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="hi">Hindi</option>
+              <option value="pt">Portuguese</option>
+              <option value="zh">Chinese</option>
+              <option value="fr">French</option>
             </select>
           </div>
           <div className="select-label" id="selectLabel">{selectedOption}</div>
@@ -80,10 +84,10 @@ const Navbar = () => {
                 {User.result.name.charAt(0).toUpperCase()}
               </Link>
             </Avatar>
-            <button className='nav-item nav-links' onClick={handleLogOut}>Log Out</button>
+            <button className='nav-item nav-links' onClick={handleLogOut}>{t('nav.logOut')}</button>
           </>
         ) : (
-          <Link to='/Auth' className='nav-item nav-links'>Log In</Link>
+          <Link to='/Auth' className='nav-item nav-links'>{t('nav.logIn')}</Link>
         )}
       </div>
     </nav>
