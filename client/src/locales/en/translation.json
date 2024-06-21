@@ -1,0 +1,216 @@
+{
+    "nav": {
+      "about": "About",
+      "products": "Products",
+      "forTeams": "For Teams",
+      "search": "Search...",
+      "logIn": "Log In",
+      "logOut": "Log Out"
+    },
+    "home": {
+      "topQuestions": "Top Questions",
+      "allQuestions": "All Questions",
+      "askQuestion": "Ask Question",
+      "loading": "Loading...",
+      "questionsCount": "{{count}} questions",
+      "loginToAskQuestion": "Login or Sign-Up to ask a question"
+    },
+    "quesList": {
+      "votes": "votes",
+      "answers": "answers",
+      "asked": "asked {{time}} - {{user}}"
+    },
+    "leftbar": {
+        "home": "Home",
+        "public": "PUBLIC",
+        "questions": "Questions",
+        "tags": "Tags",
+        "users": "Users"
+    },
+    "restrictedAccess": {
+        "line1": "You are not allowed to visit",
+        "line2": "our website at this time.",
+        "line3": "Try using a PC or a Laptop.",
+        "line4": "WEBSITE TIMINGS ON MOBILE:",
+        "line5": "10:00 AM - 1:00 PM IST"
+    },
+    "rightbar": {
+        "blogTitle": "The Overflow Blog",
+        "blog1": "Observability is key to the future of software (and your DevOps career)",
+        "blog2": "Podcast 374: How valuable is your screen name?",
+        "metaTitle": "Featured on Meta",
+        "meta1": "Review queue workflows - Final release...",
+        "meta2": "Please welcome Valued Associates: #958 - V2Blast #959 - SpencerG",
+        "meta3": "Outdated Answers: accepted answer is now unpinned on Stack Overflow",
+        "hotMetaTitle": "Hot Meta Posts",
+        "hotMeta1": "Why was this spam flag declined, yet the question marked as spam?",
+        "hotMeta2": "What is the best course of action when a user has a high enough rep to...",
+        "hotMeta3": "Is a link to the 'How to ask' help page a useful comment?",
+        "watchedTags": "Watched Tags"
+    },
+    "askQues": {
+        "title": "Ask a Public Question",
+        "labels": {
+            "title": "Title",
+            "body": "Body",
+            "tags": "Tags"
+        },
+        "descriptions": {
+            "title": "Be specific and imagine you're asking a question to another person",
+            "body": "Include all the information someone would need to answer your question",
+            "tags": "Add up to 5 tags to describe what your question is about"
+        },
+        "placeholders": {
+            "title": "e.g. Is there an R function for finding the index of an element in a vector?",
+            "body": "Include all the information someone would need to answer your question",
+            "tags": "e.g. (xml typescript wordpress)"
+        },
+        "buttons": {
+            "review": "Review your question"
+        },
+        "alerts": {
+            "enterTitleBody": "Enter Title & Body of question.",
+            "enterTitle": "Enter Title of the question.",
+            "enterBody": "Enter Body of the question."
+        }
+    },
+    "authPage": {
+        "labels": {
+          "displayName": "Display Name",
+          "email": "Email",
+          "password": "Password",
+          "otp": "OTP"
+        },
+        "passwordRequirements": "Passwords must contain at least eight characters, including at least 1 letter  and 1 number.",
+        "checkBoxText": "Opt-in to receive occasional, product updates, user research invitations, company announcements, and digests.",
+        "termsOfService": "By clicking \"Sign up\", you agree to our",
+        "termsLinks": {
+          "terms": "terms of service",
+          "privacyPolicy": "privacy policy",
+          "cookiePolicy": "cookie policy"
+        },
+        "buttons": {
+          "signup": "Sign up",
+          "login": "Login",
+          "sendOTP": "Send OTP"
+        },
+        "forgotPasswordLink": "Forgot Password?",
+        "switchButtonText": {
+          "login": "Log in",
+          "signup": "Sign up"
+        },
+        "and": "and",
+        "alreadyHaveAccountText": "Already have an account?",
+        "dontHaveAccountText": "Don't have an account?",
+        "aboutAuth": {
+            "title": "Join the Stack Overflow Community",
+            "line1": "Get unstuck - ask a question",
+            "line2": "Unlock new privileges like voting and commenting",
+            "line3": "Save your favorite tags, filters, and jobs",
+            "line4": "Earn reputation and badges",
+            "line5": "Collaborate and share knowledge with a private group for",
+            "line6": "Get Stack Overflow for Teams free up to 50 users"
+        },
+        "alerts": {
+            "enterNameEmailPassword": "Enter Name, Email & Password",
+            "enterNameEmail": "Enter Name & Email",
+            "enterEmailPassword": "Enter Email & Password",
+            "enterEmail": "Enter Email",
+            "enterPassword": "Enter Password",
+            "enterName": "Enter Name",
+            "passwordRequirements": "Password must contain at least eight characters including at least 1 letter and 1 number",
+            "registrationSuccess": "Registration successful!",
+            "otpRequired": "OTP is Required",
+            "otpSent": "An OTP has been sent to your mail for verification",
+            "loginSuccess": "Login successful!"
+        }
+    },
+    "forgotPassword": {
+        "title": "Enter Account E-Mail",
+        "button": "Send Password Reset Link",
+        "successMessage": "A password reset link has been sent to registered email",
+        "errorMessage": "Invalid E-Mail",
+        "alertMessage": "Enter Email"
+    },
+    "resetPassword": {
+        "newPassword": "New Password",
+        "confirmNewPassword": "Confirm New Password",
+        "passwordRequirements": "Passwords must contain at least eight characters, including at least 1 letter and 1 number.",
+        "updatePasswordButton": "Update Password",
+        "updatingButton": "Updating...",
+        "enterPasswordAlert": "Enter Password",
+        "fieldsRequiredAlert": "All fields are important",
+        "passwordMismatchAlert": "Confirm Password must be the same as New Password",
+        "successMessage": "Password Reset Successful!\nLOGIN to continue...",
+        "errorMessage": "Password reset failed"
+    },
+    "dispAns": {
+        "shareButton": "Share",
+        "deleteButton": "Delete",
+        "answeredOn": "answered"
+    },
+    "quesDetails": {
+        "loading": "Loading...",
+        "shareButton": "Share",
+        "deleteButton": "Delete",
+        "asked": "asked",
+        "answers": "Answers",
+        "yourAnswer": "Your Answer",
+        "postYourAnswer": "Post Your Answer",
+        "browseOtherQuestions": "Browse other question tagged",
+        "askYourQuestion": "ask your question.",
+        "or": "or"
+    },
+    "tagPage": {
+        "tags": "Tags",
+        "description1": "A tag is a keyword or label that categorizes your question with other, similar questions.",
+        "description2": "Using the right tags makes it easier for others to find and answer your question."
+    },
+    "tagList": {
+        "javascript": "For questions regarding programming in ECMAScript (JavaScript/JS) and its various dialects/implementations (excluding ActionScript). Please include all relevant tags on your question.",
+        "python": "Python is a multi-paradigm, dynamically typed, multipurpose programming language. It is designed to be quick to learn, understand, and use, and enforces a clean and uniform syntax.",
+        "csharp": "C# (pronounced 'see sharp') is a high level, statically typed, multi-paradigm programming language developed by Microsoft.",
+        "java": "Java is a high-level object oriented programming language. Use this tag when you're having problems using or understanding the language itself.",
+        "php": "PHP is a widely used, open source, general-purpose, multi-paradigm, dynamically typed and interpreted scripting language originally designed for server-side web development.",
+        "html": "HTML (HyperText Markup Language) is the markup language for creating web pages and other information to be displayed in a web browser.",
+        "android": "Android is Google's mobile operating system, used for programming or developing digital devices (Smartphones, Tablets, Automobiles, TVs, Wear, Glass, IoT).",
+        "css": "CSS is a representation style sheet language used for describing the look and formatting of HTML, XML documents and SVG elements including colors, layout, fonts, and animations.",
+        "reactjs": "React is a JavaScript library for building user interfaces. It uses a declarative, component-based paradigm and aims to be both efficient and flexible.",
+        "nodejs": "Node.js is an event-based, non-blocking, asynchronous I/O runtime that uses Google's V8 JavaScript engine and libuv library."
+    },
+    "editProfile": {
+        "title": "Edit Your Profile",
+        "publicInfo": "Public information",
+        "displayName": "Display Name",
+        "aboutMe": "About Me",
+        "tags": "Tags",
+        "tagsDescription": "Add tags separated by 1 space",
+        "saveProfile": "Save Profile",
+        "cancel": "Cancel",
+        "updateSuccess": "Updated Profile Successfully"
+    },
+    "loginHistory": {
+        "browser": "Browser",
+        "os": "OS",
+        "deviceType": "Device Type",
+        "ipAddress": "IP Address",
+        "loginTime": "Login Time",
+        "noHistory": "No login history available.",
+        "loginHistory": "Login History"
+    },
+    "proBio": {
+        "tags": "Tags",
+        "zeroTags": "0 Tags",
+        "about": "About",
+        "noBioFound": "No bio found"
+    },
+    "userProfile": {
+        "joined": "Joined",
+        "editProfile": "Edit Profile",
+        "loginHistory": "Login History"
+    },
+    "usersPage": {
+        "title": "Users"
+    }
+}
+  
