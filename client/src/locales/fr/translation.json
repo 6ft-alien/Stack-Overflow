@@ -1,0 +1,222 @@
+{
+    "nav": {
+      "about": "À propos",
+      "products": "Produits",
+      "forTeams": "Pour les équipes",
+      "search": "Rechercher...",
+      "logIn": "Se connecter",
+      "logOut": "Se déconnecter"
+    },
+    "home": {
+      "topQuestions": "Questions Principales",
+      "allQuestions": "Toutes les Questions",
+      "askQuestion": "Poser une Question",
+      "loading": "Chargement...",
+      "questionsCount": "{{count}} questions",
+      "loginToAskQuestion": "Connectez-vous ou inscrivez-vous pour poser une question"
+    },
+    "quesList": {
+      "votes": "voix",
+      "answers": "réponses",
+      "asked": "demandé {{time}} - {{user}}"
+    },
+    "leftbar": {
+        "home": "Accueil",
+        "public": "PUBLIQUE",
+        "questions": "Des questions",
+        "tags": "Étiquettes",
+        "users": "Utilisateurs"
+    },
+    "restrictedAccess": {
+        "line1": "Vous n'êtes pas autorisé à visiter",
+        "line2": "notre site web pour le moment.",
+        "line3": "Utilisez un PC ou un ordinateur portable.",
+        "line4": "HORAIRES DU SITE SUR MOBILE:",
+        "line5": "10:00 AM - 1:00 PM IST"
+    },
+    "rightbar": {
+        "blogTitle": "Le Blog Overflow",
+        "blog1": "L'observabilité est la clé de l'avenir des logiciels (et de votre carrière en DevOps)",
+        "blog2": "Podcast 374 : Quelle est la valeur de votre nom d'utilisateur ?",
+        "metaTitle": "En vedette sur Meta",
+        "meta1": "Flux de travail de la file d'attente de révision - Version finale...",
+        "meta2": "Veuillez accueillir les Associés Précieux : #958 - V2Blast #959 - SpencerG",
+        "meta3": "Réponses obsolètes : la réponse acceptée n'est plus épinglée sur Stack Overflow",
+        "hotMetaTitle": "Messages Meta Populaires",
+        "hotMeta1": "Pourquoi ce signalement de spam a-t-il été refusé, mais la question marquée comme spam ?",
+        "hotMeta2": "Quelle est la meilleure action à entreprendre lorsqu'un utilisateur a une réputation suffisante pour...",
+        "hotMeta3": "Un lien vers la page d'aide 'Comment demander' est-il un commentaire utile ?",
+        "watchedTags": "Balises surveillées"
+    },
+    "askQues": {
+        "title": "Poser une question publique",
+        "labels": {
+            "title": "Titre",
+            "body": "Corps",
+            "tags": "Balises"
+        },
+        "descriptions": {
+            "title": "Soyez précis et imaginez que vous posez une question à une autre personne",
+            "body": "Incluez toutes les informations dont quelqu'un aurait besoin pour répondre à votre question",
+            "tags": "Ajoutez jusqu'à 5 balises pour décrire de quoi parle votre question"
+        },
+        "placeholders": {
+            "title": "Par exemple : Y a-t-il une fonction R pour trouver l'indice d'un élément dans un vecteur ?",
+            "body": "Incluez toutes les informations dont quelqu'un aurait besoin pour répondre à votre question",
+            "tags": "Par exemple : (xml typescript wordpress)"
+        },
+        "buttons": {
+            "review": "Réviser votre question"
+        },
+        "alerts": {
+            "enterTitleBody": "Entrez le titre et le corps de la question.",
+            "enterTitle": "Entrez le titre de la question.",
+            "enterBody": "Entrez le corps de la question."
+        }
+    },
+    "authPage": {
+        "labels": {
+          "displayName": "Nom d'affichage",
+          "email": "Email",
+          "password": "Mot de passe",
+          "otp": "OTP"
+        },
+        "placeholders": {
+          "displayName": "Entrez votre nom d'affichage",
+          "email": "Entrez votre email",
+          "password": "Entrez votre mot de passe",
+          "otp": "Entrez OTP"
+        },
+        "passwordRequirements": "Les mots de passe doivent contenir au moins huit caractères, dont au moins 1 lettre et 1 chiffre.",
+        "checkBoxText": "Optez pour recevoir des mises à jour occasionnelles de produits, des invitations à des recherches utilisateur, des annonces d'entreprise et des résumés.",
+        "termsOfService": "En cliquant sur \"S'inscrire\", vous acceptez nos",
+        "termsLinks": {
+          "terms": "conditions d'utilisation",
+          "privacyPolicy": "politique de confidentialité",
+          "cookiePolicy": "politique en matière de cookies"
+        },
+        "buttons": {
+          "signup": "S'inscrire",
+          "login": "S'identifier",
+          "sendOTP": "Envoyer OTP"
+        },
+        "forgotPasswordLink": "Mot de passe oublié ?",
+        "switchButtonText": {
+          "login": "S'identifier",
+          "signup": "S'inscrire"
+        },
+        "and": "et",
+        "alreadyHaveAccountText": "Vous avez déjà un compte ?",
+        "dontHaveAccountText": "Vous n'avez pas de compte ?",
+        "aboutAuth": {
+            "title": "Rejoignez la communauté Stack Overflow",
+            "line1": "Débloquez-vous - posez une question",
+            "line2": "Débloquez de nouveaux privilèges comme le vote et les commentaires",
+            "line3": "Enregistrez vos étiquettes, filtres et emplois préférés",
+            "line4": "Gagnez en réputation et badges",
+            "line5": "Collaborez et partagez vos connaissances avec un groupe privé pour",
+            "line6": "Obtenez Stack Overflow for Teams gratuitement jusqu'à 50 utilisateurs"
+        },
+        "alerts": {
+            "enterNameEmailPassword": "Entrez votre nom, votre email et votre mot de passe",
+            "enterNameEmail": "Entrez votre nom et votre email",
+            "enterEmailPassword": "Entrez votre email et votre mot de passe",
+            "enterEmail": "Entrez votre email",
+            "enterPassword": "Entrez votre mot de passe",
+            "enterName": "Entrez votre nom",
+            "passwordRequirements": "Le mot de passe doit contenir au moins huit caractères, incluant au moins 1 lettre et 1 chiffre",
+            "registrationSuccess": "Inscription réussie !",
+            "otpRequired": "OTP est requis",
+            "otpSent": "Un OTP a été envoyé à votre adresse email pour vérification",
+            "loginSuccess": "Connexion réussie !"
+        }
+    },
+    "forgotPassword": {
+        "title": "Entrez l'e-mail du compte",
+        "button": "Envoyer le lien de réinitialisation du mot de passe",
+        "successMessage": "Un lien de réinitialisation de mot de passe a été envoyé à l'e-mail enregistré",
+        "errorMessage": "E-mail invalide",
+        "alertMessage": "Entrez l'e-mail"
+    },
+    "resetPassword": {
+        "newPassword": "Nouveau Mot de Passe",
+        "confirmNewPassword": "Confirmer le Nouveau Mot de Passe",
+        "passwordRequirements": "Les mots de passe doivent contenir au moins huit caractères, incluant au moins 1 lettre et 1 chiffre.",
+        "updatePasswordButton": "Mettre à jour le mot de passe",
+        "updatingButton": "Mise à jour...",
+        "enterPasswordAlert": "Entrez le mot de passe",
+        "fieldsRequiredAlert": "Tous les champs sont importants",
+        "passwordMismatchAlert": "Le mot de passe de confirmation doit être identique au nouveau mot de passe",
+        "successMessage": "Réinitialisation du mot de passe réussie !\nCONNECTEZ-VOUS pour continuer...",
+        "errorMessage": "Échec de la réinitialisation du mot de passe"
+    },
+    "dispAns": {
+        "shareButton": "Partager",
+        "deleteButton": "Supprimer",
+        "answeredOn": "répondu"
+    },
+    "quesDetails": {
+        "loading": "Chargement...",
+        "shareButton": "Partager",
+        "deleteButton": "Supprimer",
+        "asked": "demandé",
+        "answers": "Réponses",
+        "yourAnswer": "Votre Réponse",
+        "postYourAnswer": "Publiez Votre Réponse",
+        "browseOtherQuestions": "Parcourir d'autres questions étiquetées",
+        "askYourQuestion": "posez votre question.",
+        "or": "ou"
+    },
+    "tagPage": {
+        "tags": "Étiquettes",
+        "description1": "Une étiquette est un mot-clé ou un label qui catégorise votre question avec d'autres questions similaires.",
+        "description2": "Utiliser les bonnes étiquettes facilite la recherche et la réponse à votre question par d'autres utilisateurs."
+    },
+    "tagList": {
+        "javascript": "Pour les questions concernant la programmation en ECMAScript (JavaScript/JS) et ses divers dialectes/implémentations (à l'exclusion de ActionScript). Veuillez inclure toutes les étiquettes pertinentes sur votre question.",
+        "python": "Python est un langage de programmation multiparadigme, typé dynamiquement et polyvalent. Il est conçu pour être rapide à apprendre, comprendre et utiliser, et impose une syntaxe propre et uniforme.",
+        "csharp": "C# (prononcé 'see sharp') est un langage de programmation de haut niveau, typé statiquement et multiparadigme développé par Microsoft.",
+        "java": "Java est un langage de programmation orienté objet de haut niveau. Utilisez cette étiquette lorsque vous avez des problèmes à utiliser ou à comprendre le langage lui-même.",
+        "php": "PHP est un langage de script largement utilisé, open source, de but général, multiparadigme, typé dynamiquement et interprété, conçu à l'origine pour le développement web côté serveur.",
+        "html": "HTML (HyperText Markup Language) est le langage de balisage utilisé pour créer des pages web et d'autres informations à afficher dans un navigateur web.",
+        "android": "Android est le système d'exploitation mobile de Google, utilisé pour programmer ou développer des dispositifs numériques (Smartphones, Tablettes, Automobiles, Télévisions, Wear, Glass, IoT).",
+        "css": "CSS est un langage de feuille de style de représentation utilisé pour décrire l'apparence et la mise en forme des documents HTML, XML et des éléments SVG, y compris les couleurs, la mise en page, les polices et les animations.",
+        "reactjs": "React est une bibliothèque JavaScript pour construire des interfaces utilisateur. Il utilise un paradigme déclaratif, basé sur les composants et vise à être à la fois efficace et flexible.",
+        "nodejs": "Node.js est un runtime basé sur les événements, non bloquant et asynchrone qui utilise le moteur JavaScript V8 de Google et la bibliothèque libuv."
+    },
+    "editProfile": {
+        "title": "Modifiez votre profil",
+        "publicInfo": "Informations publiques",
+        "displayName": "Nom d'affichage",
+        "aboutMe": "À propos de moi",
+        "tags": "Tags",
+        "tagsDescription": "Ajouter des tags séparés par 1 espace",
+        "saveProfile": "Enregistrer le profil",
+        "cancel": "Annuler",
+        "updateSuccess": "Profil mis à jour avec succès"
+    },
+    "loginHistory": {
+        "browser": "Navigateur",
+        "os": "OS",
+        "deviceType": "Type d'appareil",
+        "ipAddress": "Adresse IP",
+        "loginTime": "Heure de Connexion",
+        "noHistory": "Aucun historique de connexion disponible.",
+        "loginHistory": "Historique de Connexion"
+    },
+    "proBio": {
+        "tags": "Tags",
+        "zeroTags": "0 Tags",
+        "about": "À propos",
+        "noBioFound": "Aucune bio trouvée"
+    },
+    "userProfile": {
+        "joined": "Rejoint",
+        "editProfile": "Modifier le profil",
+        "loginHistory": "Historique de connexion"
+    },
+    "usersPage": {
+        "title": "Utilisateurs"
+    }    
+}
+  
