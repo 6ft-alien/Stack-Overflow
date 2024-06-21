@@ -1,0 +1,215 @@
+{
+    "nav": {
+      "about": "关于",
+      "products": "产品",
+      "forTeams": "团队",
+      "search": "搜索...",
+      "logIn": "登录",
+      "logOut": "登出"
+    },
+    "home": {
+      "topQuestions": "热门问题",
+      "allQuestions": "所有问题",
+      "askQuestion": "提问",
+      "loading": "加载中...",
+      "questionsCount": "{{count}} 问题",
+      "loginToAskQuestion": "登录或注册以提问"
+    },
+    "quesList": {
+      "votes": "投票",
+      "answers": "回答",
+      "asked": "提问 {{time}} - {{user}}"
+    },
+    "leftbar": {
+        "home": "首页",
+        "public": "公共",
+        "questions": "问题",
+        "tags": "标签",
+        "users": "用户"
+    },
+    "restrictedAccess": {
+        "line1": "您目前无法访问我们的网站。",
+        "line2": "请尝试使用电脑或笔记本。",
+        "line3": "网站移动端使用时间：",
+        "line4": "10:00 AM - 1:00 PM IST",
+        "line5": ""
+    },
+    "rightbar": {
+        "blogTitle": "Overflow博客",
+        "blog1": "可观察性是软件未来的关键（以及您的DevOps职业）",
+        "blog2": "播客374：您的屏幕名称有多有价值？",
+        "metaTitle": "Meta精选",
+        "meta1": "审核队列工作流程 - 最终发布...",
+        "meta2": "请欢迎尊贵的同事：#958 - V2Blast #959 - SpencerG",
+        "meta3": "过时的答案：接受的答案现在不再固定在Stack Overflow上",
+        "hotMetaTitle": "热门Meta帖子",
+        "hotMeta1": "为什么此垃圾邮件标志被拒绝，但问题被标记为垃圾邮件？",
+        "hotMeta2": "当用户的声望足够高时，最好的行动是什么？",
+        "hotMeta3": "将“如何提问”帮助页面链接作为评论有用吗？",
+        "watchedTags": "观察的标签"
+    },
+    "askQues": {
+        "title": "提出公开问题",
+        "labels": {
+            "title": "标题",
+            "body": "主体",
+            "tags": "标签"
+        },
+        "descriptions": {
+            "title": "要具体，并设想你正在向另一个人提问",
+            "body": "包括任何人需要回答你问题的所有信息",
+            "tags": "添加最多5个标签来描述你的问题是关于什么"
+        },
+        "placeholders": {
+            "title": "例如：是否存在一种R函数可以找到向量中元素的索引？",
+            "body": "包括任何人需要回答你问题的所有信息",
+            "tags": "例如：（xml typescript wordpress）"
+        },
+        "buttons": {
+            "review": "审阅您的问题"
+        },
+        "alerts": {
+            "enterTitleBody": "输入问题的标题和正文。",
+            "enterTitle": "输入问题的标题。",
+            "enterBody": "输入问题的正文。"
+        }
+    },
+    "authPage": {
+        "labels": {
+          "displayName": "显示名称",
+          "email": "电子邮件",
+          "password": "密码",
+          "otp": "OTP"
+        },
+        "passwordRequirements": "密码必须至少包含八个字符，包括至少 1 个字母和 1 个数字。",
+        "checkBoxText": "选择接收产品的偶发更新、用户研究邀请、公司公告和摘要。",
+        "termsOfService": "点击“注册”即表示您同意我们的",
+        "termsLinks": {
+          "terms": "服务条款",
+          "privacyPolicy": "隐私政策",
+          "cookiePolicy": "Cookie 政策"
+        },
+        "buttons": {
+          "signup": "注册",
+          "login": "登录",
+          "sendOTP": "发送 OTP"
+        },
+        "forgotPasswordLink": "忘记密码？",
+        "switchButtonText": {
+          "login": "登录",
+          "signup": "注册"
+        },
+        "and": "和",
+        "alreadyHaveAccountText": "已经有一个账户？",
+        "dontHaveAccountText": "还没有账户？",
+        "aboutAuth": {
+            "title": "加入 Stack Overflow 社区",
+            "line1": "解惑 - 提问",
+            "line2": "解锁投票和评论等新特权",
+            "line3": "保存你喜欢的标签、过滤器和工作",
+            "line4": "获得声誉和徽章",
+            "line5": "与私人群组合作并分享知识",
+            "line6": "免费获得 Stack Overflow for Teams，最多可达 50 名用户"
+        },
+        "alerts": {
+            "enterNameEmailPassword": "请输入姓名、电子邮件和密码",
+            "enterNameEmail": "请输入姓名和电子邮件",
+            "enterEmailPassword": "请输入电子邮件和密码",
+            "enterEmail": "请输入电子邮件",
+            "enterPassword": "请输入密码",
+            "enterName": "请输入姓名",
+            "passwordRequirements": "密码必须包含至少八个字符，包括至少1个字母和1个数字",
+            "registrationSuccess": "注册成功！",
+            "otpRequired": "需要OTP",
+            "otpSent": "已向您的邮件发送OTP进行验证",
+            "loginSuccess": "登录成功！"
+        }
+    },
+    "forgotPassword": {
+        "title": "输入帐户电子邮件",
+        "button": "发送密码重置链接",
+        "successMessage": "密码重置链接已发送到注册邮箱",
+        "errorMessage": "无效的电子邮件",
+        "alertMessage": "输入电子邮件"
+    },
+    "resetPassword": {
+        "newPassword": "新密码",
+        "confirmNewPassword": "确认新密码",
+        "passwordRequirements": "密码必须包含至少八个字符，包括至少1个字母和1个数字。",
+        "updatePasswordButton": "更新密码",
+        "updatingButton": "正在更新...",
+        "enterPasswordAlert": "输入密码",
+        "fieldsRequiredAlert": "所有字段都很重要",
+        "passwordMismatchAlert": "确认密码必须与新密码相同",
+        "successMessage": "密码重置成功！\n登录以继续...",
+        "errorMessage": "密码重置失败"
+    },
+    "dispAns": {
+        "shareButton": "分享",
+        "deleteButton": "删除",
+        "answeredOn": "回答于"
+    },
+    "quesDetails": {
+        "loading": "加载中...",
+        "shareButton": "分享",
+        "deleteButton": "删除",
+        "asked": "提问于",
+        "answers": "答案",
+        "yourAnswer": "你的答案",
+        "postYourAnswer": "发布你的答案",
+        "browseOtherQuestions": "浏览其他标记的问题",
+        "askYourQuestion": "提出你的问题。",
+        "or": "或"
+    },
+    "tagPage": {
+        "tags": "标签",
+        "description1": "标签是将您的问题与其他类似问题分类的关键字或标签。",
+        "description2": "使用正确的标签可以让其他人更容易找到并回答您的问题。"
+    },
+    "tagList": {
+        "javascript": "关于编写 ECMAScript (JavaScript/JS) 及其各种方言/实现 (不包括 ActionScript) 的问题。请在您的问题中包括所有相关标签。",
+        "python": "Python 是一种多范式、动态类型、多用途的编程语言。它设计为易于学习、理解和使用，并且实施了干净和统一的语法。",
+        "csharp": "C#（发音为“see sharp”）是一种由微软开发的高级、静态类型、多范式的编程语言。",
+        "java": "Java 是一种高级面向对象编程语言。当您在使用或理解该语言本身时遇到问题，请使用此标签。",
+        "php": "PHP 是一种广泛使用的开源通用多范式动态类型解释型脚本语言，最初设计用于服务器端 web 开发。",
+        "html": "HTML（超文本标记语言）是一种用于创建网页和在浏览器中显示的其他信息的标记语言。",
+        "android": "Android 是 Google 的移动操作系统，用于编程或开发数字设备（智能手机、平板电脑、汽车、电视、穿戴设备、眼镜、物联网）。",
+        "css": "CSS 是一种表示样式表语言，用于描述 HTML、XML 文档和 SVG 元素的外观和格式，包括颜色、布局、字体和动画。",
+        "reactjs": "React 是一个用于构建用户界面的 JavaScript 库。它采用声明式、基于组件的范式，旨在既高效又灵活。",
+        "nodejs": "Node.js 是一个基于事件、非阻塞、异步 I/O 的运行时，使用 Google 的 V8 JavaScript 引擎和 libuv 库。"
+    },
+    "editProfile": {
+        "title": "编辑您的个人资料",
+        "publicInfo": "公开信息",
+        "displayName": "显示名称",
+        "aboutMe": "关于我",
+        "tags": "标签",
+        "tagsDescription": "添加以1个空格分隔的标签",
+        "saveProfile": "保存个人资料",
+        "cancel": "取消",
+        "updateSuccess": "个人资料更新成功"
+    },
+    "loginHistory": {
+        "browser": "浏览器",
+        "os": "操作系统",
+        "deviceType": "设备类型",
+        "ipAddress": "IP 地址",
+        "loginTime": "登录时间",
+        "noHistory": "没有可用的登录历史记录。",
+        "loginHistory": "登录历史"
+    },
+    "proBio": {
+        "tags": "标签",
+        "zeroTags": "0 标签",
+        "about": "关于",
+        "noBioFound": "未找到简介"
+    },
+    "userProfile": {
+        "joined": "加入",
+        "editProfile": "编辑资料",
+        "loginHistory": "登录历史"
+    },
+    "usersPage": {
+        "title": "用户"
+    }
+}
