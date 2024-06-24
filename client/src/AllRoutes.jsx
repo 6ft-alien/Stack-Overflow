@@ -13,6 +13,8 @@ import ResetPassword from './pages/Auth/ResetPassword'
 import LoginHistory from './pages/UserProfile/LoginHistory'
 import RestrictedAccess from './components/RestrictedAccess/RestrictedAccess'
 import useMobileRestriction from './hooks/useMobileRestriction'
+import VerifyEmail from './pages/LanguageAuthentication/VerifyEmail'
+import VerifyPhone from './pages/LanguageAuthentication/VerifyPhone'
 
 const AllRoutes = () => {
     const isMobileRestricted = useMobileRestriction();
@@ -32,6 +34,8 @@ const AllRoutes = () => {
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password/:id/:token' element={<ResetPassword />} />
         <Route path='/Users/login-history/:id' element={<LoginHistory />} />
+        <Route path='/verify-email' element={<VerifyEmail />} />
+        <Route path='/verify-phone' element={<VerifyPhone />} />
       
     </Routes>
     )
