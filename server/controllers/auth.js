@@ -84,7 +84,7 @@ export const sendOTP = async (req, res) => {
             from: process.env.GMAIL,
             to: email,
             subject: 'Verification Code',
-            text: `Your OTP code is ${otp}`
+            text: `OTP to login to your account: ${otp}\nCode will expire in 5 mins. Do not share with anyone\n\nThank you for using my stack overflow clone\nRegards\nNityanand K G\naka 6ft-alien`
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
