@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import icon from '../../assets/icon.svg';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { resetPassword } from '../../actions/auth';
@@ -11,10 +11,19 @@ const ResetPassword = () => {
     const { id, token } = useParams();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [language, setLanguage] = useState('');
+
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const location = useLocation();
+
     const resetPasswordStatus = useSelector(state => state.auth.resetPasswordStatus);
+
+    useEffect(() => {
+        const lang = location.state?.language || localStorage.getItem('language');
+        setLanguage(lang);
+    }, [location]);    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -41,7 +50,7 @@ const ResetPassword = () => {
     };
 
     return (
-        <section className="auth-section">
+        <section className={`auth-section ${language}`}>
             <div className="auth-container-2">
                 <img src={icon} alt="stack overflow" className="login-logo" />
                 <form onSubmit={handleSubmit} style={{width: "320px"}}>
