@@ -5,7 +5,8 @@
       "forTeams": "For Teams",
       "search": "Search...",
       "logIn": "Log In",
-      "logOut": "Log Out"
+      "logOut": "Log Out",
+      "verifyMessage": "Verify E-Mail first to translate site to French."
     },
     "home": {
       "topQuestions": "Top Questions",
@@ -211,6 +212,42 @@
     },
     "usersPage": {
         "title": "Users"
+    },
+    "verMail": {
+        "labels": {
+          "enterEmail": "Enter E-Mail",
+          "otp": "OTP"
+        },
+        "messages": {
+          "verifyEmailToTranslate": "Verify E-Mail first to translate site to French.",
+          "otpRequired": "OTP is required.",
+          "emailVerified": "E-Mail verified successfully!",
+          "otpSent": "An OTP has been sent to your mail."
+        },
+        "buttons": {
+          "verifyEmail": "Verify E-Mail",
+          "sendOTP": "Send OTP"
+        }
+    },
+    "verPhone": {
+      "labels": {
+        "enterPhone": "Phone Number",
+        "otp": "OTP"
+      },
+      "messages": {
+        "verifyPhoneToTranslate": "Verify your phone number to translate to:"
+      },
+      "buttons": {
+        "sendOTP": "Send OTP",
+        "verifyPhone": "Verify Phone Number"
+      },
+      "alerts": {
+        "enterPhone": "Enter Phone Number.",
+        "enterOTP": "Enter OTP.",
+        "phoneVerificationFailed": "Phone verification failed: {{message}}",
+        "otpSent": "An SMS containing OTP has been sent to the Phone Number.",
+        "phoneVerified": "Phone Number verified successfully!"
+      }
     }
 }
   
