@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import icon from '../../assets/icon.svg';
 import { useDispatch } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import './Auth.css';
 import AboutAuth from './AboutAuth';
 import { signup, login, checkAuth, sendOTP, verifyOTP } from '../../actions/auth';
@@ -16,10 +16,18 @@ const Auth = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [otp, setOTP] = useState('');
+  const [language, setLanguage] = useState('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+
   var valid = true;
+
+  useEffect(() => {
+    const lang = location.state?.language || localStorage.getItem('language');
+    setLanguage(lang);
+  }, [location]);
 
   const handleSwitch = () => {
     setIsSignup(!isSignup);
@@ -121,7 +129,7 @@ const Auth = () => {
   };
 
   return (
-    <section className="auth-section">
+    <section className={`auth-section ${language}`}>
       {isSignup && <AboutAuth />}
       <div className="auth-container-2">
         {!isSignup && <img src={icon} alt="stack overflow" className="login-logo" />}
@@ -183,6 +191,7 @@ const Auth = () => {
                 id="otp"
                 disabled={!isOTPSent}
                 value={otp}
+                maxLength={6}
                 onChange={(e) => setOTP(e.target.value)}
               />
             </label>
