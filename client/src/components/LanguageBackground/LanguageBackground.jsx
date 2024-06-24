@@ -14,7 +14,7 @@ const LanguageBackground = ({ children }) => {
                 setBgColor('white');
                 break;
             case 'hi':
-                setBgColor('rgb(138, 138, 255)');
+                setBgColor('#4473ff');
                 break;
             case 'zh':
                 setBgColor('rgb(80, 171, 80)');
