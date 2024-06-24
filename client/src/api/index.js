@@ -17,6 +17,11 @@ export const verifyOTP = (otpData) => API.post('/user/verify-otp', otpData);
 export const forgotPassword = (email) => API.post('/user/forgot-password', email);
 export const resetPassword = (id, token, password) => API.patch(`/user/reset-password/${id}/${token}`, { password });
 
+export const sendOTPMail = (email) => API.post('/translations/send-otp-mail', { email })
+export const verifyOTPMail = (otpData) => API.post('/translations/verify-otp-mail', otpData);
+export const sendOTPPhone = (phone) => API.post('/translations/send-otp-phone', { phone })
+export const verifyOTPPhone = (otpData) => API.post('/translations/verify-otp-phone', otpData);
+
 export const postQuestion = (questionData) => API.post('/questions/Ask', questionData);
 export const getAllQuestions = () => API.get('/questions/get');
 export const deleteQuestion = (id) => API.delete(`/questions/delete/${id}`);
@@ -24,7 +29,6 @@ export const voteQuestion = (id, value, userId) => API.patch(`/questions/vote/${
 
 export const postAnswer = (id, noOfAnswers, answerBody, userAnswered, userId) => API.patch(`/answer/post/${id}`, { noOfAnswers, answerBody, userAnswered, userId });
 export const deleteAnswer = (id, answerId, noOfAnswers) => API.patch(`/answer/delete/${id}`, { answerId, noOfAnswers });
-
 
 export const fetchAllUsers = () => API.get('/user/getAllUsers');
 export const fetchCurrentTime = () => API.get('https://worldtimeapi.org/api/timezone/Asia/Kolkata');
