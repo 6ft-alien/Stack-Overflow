@@ -5,7 +5,8 @@
       "forTeams": "Para Equipos",
       "search": "Buscar...",
       "logIn": "Iniciar Sesión",
-      "logOut": "Cerrar Sesión"
+      "logOut": "Cerrar Sesión",
+      "verifyMessage": "Verifique primero el correo electrónico para traducir el sitio al francés."
     },
     "home": {
       "topQuestions": "Principales Preguntas",
@@ -211,6 +212,42 @@
     },
     "usersPage": {
         "title": "Usuarios"
+    },
+    "verMail": {
+        "labels": {
+          "enterEmail": "Ingrese correo electrónico",
+          "otp": "OTP"
+        },
+        "messages": {
+          "verifyEmailToTranslate": "Verifique primero el correo electrónico para traducir el sitio al francés.",
+          "otpRequired": "Se requiere OTP.",
+          "emailVerified": "¡Correo electrónico verificado correctamente!",
+          "otpSent": "Se ha enviado un OTP a su correo electrónico."
+        },
+        "buttons": {
+          "verifyEmail": "Verificar correo electrónico",
+          "sendOTP": "Enviar OTP"
+        }
+    },
+    "verPhone": {
+      "labels": {
+        "enterPhone": "Número de teléfono",
+        "otp": "OTP"
+      },
+      "messages": {
+        "verifyPhoneToTranslate": "Verifique su número de teléfono para traducir a:"
+      },
+      "buttons": {
+        "sendOTP": "Enviar OTP",
+        "verifyPhone": "Verificar número de teléfono"
+      },
+      "alerts": {
+        "enterPhone": "Ingrese el número de teléfono.",
+        "enterOTP": "Ingrese OTP.",
+        "phoneVerificationFailed": "La verificación del teléfono falló: {{message}}",
+        "otpSent": "Se ha enviado un SMS con OTP al número de teléfono.",
+        "phoneVerified": "¡Número de teléfono verificado con éxito!"
+      }
     }
 }
   
