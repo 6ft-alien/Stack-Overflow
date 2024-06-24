@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { jwtDecode } from 'jwt-decode';
 import { useTranslation } from 'react-i18next';
@@ -12,16 +12,31 @@ import { setCurrentUser } from '../../actions/currentUser';
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
   const { t, i18n } = useTranslation();
 
-  const User = useSelector((state) => state.currentUserReducer);
-  const [selectedOption, setSelectedOption] = useState('English');
+  const languageMap = {
+    en: 'English',
+    es: 'Spanish',
+    hi: 'Hindi',
+    pt: 'Portuguese',
+    zh: 'Chinese',
+    fr: 'French',
+  };
 
-  const updateLanguage = (event) => {
+  const User = useSelector((state) => state.currentUserReducer);
+  const [currentUrl, setCurrentUrl] = useState('');
+
+  const updateLanguage = async (event) => {
     const selectedLang = event.target.value;
-    i18n.changeLanguage(selectedLang);
-    localStorage.setItem('language', selectedLang);
-    setSelectedOption(event.target.options[event.target.selectedIndex].text);
+    if (selectedLang === 'fr') {
+      alert(t('nav.verifyMessage'));
+      navigate('/verify-email', { state: { from: currentUrl } });
+    }
+    else {
+      alert(`Verify your Phone Number first to translate site to ${languageMap[selectedLang]}`)
+      navigate('/verify-phone', { state: { from: currentUrl, language: selectedLang } });
+    }
   };
 
   useEffect(() => {
@@ -29,10 +44,13 @@ const Navbar = () => {
     if (select) {
       const storedLang = localStorage.getItem('language') || 'en';
       i18n.changeLanguage(storedLang);
-      const initialOption = select.options[select.selectedIndex].text;
-      setSelectedOption(initialOption);
     }
   }, [i18n]);
+
+  useEffect(() => {
+    const path = window.location.pathname + window.location.search;
+    setCurrentUrl(path);
+  }, [location]);
 
   const handleLogOut = () => {
     dispatch({ type: 'LOGOUT' });
@@ -75,7 +93,7 @@ const Navbar = () => {
               <option value="fr">French</option>
             </select>
           </div>
-          <div className="select-label" id="selectLabel">{selectedOption}</div>
+          <div className="select-label" id="selectLabel">{languageMap[localStorage.getItem('language') || 'en']}</div>
         </div>
         {User?.result?.name ? (
           <>
