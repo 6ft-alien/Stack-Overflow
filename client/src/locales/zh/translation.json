@@ -5,7 +5,8 @@
       "forTeams": "团队",
       "search": "搜索...",
       "logIn": "登录",
-      "logOut": "登出"
+      "logOut": "登出",
+      "verifyMessage": "首先验证电子邮件以将网站翻译为法语。"
     },
     "home": {
       "topQuestions": "热门问题",
@@ -211,5 +212,41 @@
     },
     "usersPage": {
         "title": "用户"
+    },
+    "verMail": {
+        "labels": {
+          "enterEmail": "输入电子邮件",
+          "otp": "OTP"
+        },
+        "messages": {
+          "verifyEmailToTranslate": "首先验证电子邮件以将网站翻译为法语。",
+          "otpRequired": "需要OTP。",
+          "emailVerified": "电子邮件验证成功！",
+          "otpSent": "已向您的电子邮件发送了OTP。"
+        },
+        "buttons": {
+          "verifyEmail": "验证电子邮件",
+          "sendOTP": "发送OTP"
+        }
+    },
+    "verPhone": {
+      "labels": {
+        "enterPhone": "电话号码",
+        "otp": "OTP"
+      },
+      "messages": {
+        "verifyPhoneToTranslate": "验证您的电话号码以翻译为："
+      },
+      "buttons": {
+        "sendOTP": "发送 OTP",
+        "verifyPhone": "验证电话号码"
+      },
+      "alerts": {
+        "enterPhone": "请输入电话号码。",
+        "enterOTP": "请输入 OTP。",
+        "phoneVerificationFailed": "电话验证失败：{{message}}",
+        "otpSent": "包含 OTP 的短信已发送到电话号码。",
+        "phoneVerified": "电话号码验证成功！"
+      }
     }
 }
