@@ -5,7 +5,8 @@
       "forTeams": "Pour les équipes",
       "search": "Rechercher...",
       "logIn": "Se connecter",
-      "logOut": "Se déconnecter"
+      "logOut": "Se déconnecter",
+      "verifyMessage": "Veuillez d'abord vérifier votre e-mail pour traduire le site en français."
     },
     "home": {
       "topQuestions": "Questions Principales",
@@ -217,6 +218,42 @@
     },
     "usersPage": {
         "title": "Utilisateurs"
-    }    
+    },
+    "verMail": {
+        "labels": {
+          "enterEmail": "Entrez votre adresse e-mail",
+          "otp": "OTP"
+        },
+        "messages": {
+          "verifyEmailToTranslate": "Vérifiez d'abord votre e-mail pour traduire le site en français.",
+          "otpRequired": "OTP est requis.",
+          "emailVerified": "E-mail vérifié avec succès !",
+          "otpSent": "Un OTP a été envoyé à votre adresse e-mail."
+        },
+        "buttons": {
+          "verifyEmail": "Vérifier l'e-mail",
+          "sendOTP": "Envoyer OTP"
+        }
+    },
+    "verPhone": {
+      "labels": {
+        "enterPhone": "Numéro de téléphone",
+        "otp": "OTP"
+      },
+      "messages": {
+        "verifyPhoneToTranslate": "Vérifiez votre numéro de téléphone pour traduire en :"
+      },
+      "buttons": {
+        "sendOTP": "Envoyer OTP",
+        "verifyPhone": "Vérifier le numéro de téléphone"
+      },
+      "alerts": {
+        "enterPhone": "Entrez le numéro de téléphone.",
+        "enterOTP": "Entrez le OTP.",
+        "phoneVerificationFailed": "Échec de la vérification du téléphone : {{message}}",
+        "otpSent": "Un SMS contenant le OTP a été envoyé au numéro de téléphone.",
+        "phoneVerified": "Numéro de téléphone vérifié avec succès !"
+      }
+    }
 }
   
