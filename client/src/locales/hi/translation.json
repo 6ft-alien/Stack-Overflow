@@ -5,7 +5,8 @@
       "forTeams": "टीमों के लिए",
       "search": "खोजें...",
       "logIn": "लॉग इन करें",
-      "logOut": "लॉग आउट करें"
+      "logOut": "लॉग आउट करें",
+      "verifyMessage": "साइट को फ्रेंच में अनुवादित करने के लिए पहले ईमेल को सत्यापित करें।"
     },
     "home": {
       "topQuestions": "शीर्ष प्रश्न",
@@ -211,6 +212,42 @@
     },
     "usersPage": {
         "title": "उपयोगकर्ता"
+    },
+    "verMail": {
+        "labels": {
+          "enterEmail": "ईमेल दर्ज करें",
+          "otp": "OTP"
+        },
+        "messages": {
+          "verifyEmailToTranslate": "साइट को फ्रेंच में अनुवादित करने के लिए पहले ईमेल को सत्यापित करें।",
+          "otpRequired": "OTP आवश्यक है।",
+          "emailVerified": "ईमेल सफलतापूर्वक सत्यापित!",
+          "otpSent": "आपके ईमेल पर OTP भेज दिया गया है।"
+        },
+        "buttons": {
+          "verifyEmail": "ईमेल सत्यापित करें",
+          "sendOTP": "OTP भेजें"
+        }
+    },
+    "verPhone": {
+      "labels": {
+        "enterPhone": "फोन नंबर",
+        "otp": "ओटीपी"
+      },
+      "messages": {
+        "verifyPhoneToTranslate": "अनुवाद करने के लिए अपना फोन नंबर सत्यापित करें:"
+      },
+      "buttons": {
+        "sendOTP": "ओटीपी भेजें",
+        "verifyPhone": "फोन नंबर सत्यापित करें"
+      },
+      "alerts": {
+        "enterPhone": "फोन नंबर दर्ज करें।",
+        "enterOTP": "ओटीपी दर्ज करें।",
+        "phoneVerificationFailed": "फोन सत्यापन विफल: {{message}}",
+        "otpSent": "फोन नंबर पर ओटीपी युक्त एसएमएस भेजा गया है।",
+        "phoneVerified": "फोन नंबर सफलतापूर्वक सत्यापित हुआ!"
+      }
     }
 }
   
