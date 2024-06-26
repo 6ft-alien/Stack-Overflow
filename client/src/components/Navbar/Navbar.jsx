@@ -34,7 +34,7 @@ const Navbar = () => {
       navigate('/verify-email', { state: { from: currentUrl } });
     }
     else {
-      alert(`Verify your Phone Number first to translate site to ${languageMap[selectedLang]}`)
+      alert(`${t('nav.verifyMessage2')} ${languageMap[selectedLang]}`)
       navigate('/verify-phone', { state: { from: currentUrl, language: selectedLang } });
     }
   };
