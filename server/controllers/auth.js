@@ -14,6 +14,19 @@ export const signup = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 12);
         const newUser = await User.create({ name, email, password: hashedPassword });
         const token = jwt.sign({ email: newUser.email, id:newUser._id}, process.env.JWT_SECRET, { expiresIn: '1h'});
+        
+        const loginDetail = {
+            browser: req.useragent.browser,
+            os: req.useragent.os,
+            deviceType: req.useragent.isMobile ? 'Mobile' : (req.useragent.isDesktop ? 'Desktop' : 'Laptop'),
+            ipAddress: req.clientIp,
+            loginTime: new Date() 
+        };
+        
+        const registeredUser = await User.findOne({ email });
+        registeredUser.loginDetails.push(loginDetail);
+        await registeredUser.save();
+
         res.status(200).json({ result: newUser, token });
     }
     catch(error) {
