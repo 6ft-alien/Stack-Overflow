@@ -161,6 +161,7 @@
         "postYourAnswer": "发布你的答案",
         "browseOtherQuestions": "浏览其他标记的问题",
         "askYourQuestion": "提出你的问题。",
+        "copiedURL": "复制的 URL： ",
         "or": "或"
     },
     "tagPage": {
