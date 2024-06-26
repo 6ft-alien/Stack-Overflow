@@ -4,7 +4,7 @@ const authReducer = (state = { authData: null, loading: false, error: null }, ac
             localStorage.setItem('profile', JSON.stringify({ ...action?.data }));
             return { ...state, authData: action?.data, loading: false, error: null };
         case 'LOGOUT':
-            localStorage.clear();
+            localStorage.removeItem('profile');
             return { ...state, authData: null, loading: false, error: null };
         case 'FORGOT_PASSWORD_REQUEST':
         case 'RESET_PASSWORD_REQUEST':
